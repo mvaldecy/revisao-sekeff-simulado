@@ -1,0 +1,2251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Revisão - IA / ML</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f3f4f6;
+      }
+
+      header {
+        background: #111827;
+        color: #f9fafb;
+        padding: 16px 24px;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 20px;
+      }
+
+      header p {
+        margin: 4px 0 0;
+        font-size: 13px;
+        color: #d1d5db;
+      }
+
+      main {
+        max-width: 900px;
+        margin: 24px auto;
+        background: #ffffff;
+        padding: 24px;
+        border-radius: 8px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      }
+
+      .question {
+        margin-bottom: 20px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .question:last-child {
+        border-bottom: none;
+      }
+
+      .question-title {
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      .question-text {
+        margin-bottom: 8px;
+        line-height: 1.4;
+      }
+
+      .options {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        margin-left: 8px;
+      }
+
+      label {
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      .footer {
+        margin-top: 24px;
+        padding-top: 16px;
+        border-top: 1px solid #e5e7eb;
+        font-size: 13px;
+        color: #6b7280;
+      }
+
+      .answers-hint {
+        margin-bottom: 8px;
+        font-style: italic;
+      }
+
+      .export-button {
+        background: #2563eb;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 16px;
+        transition: background 0.2s;
+      }
+
+      .export-button:hover {
+        background: #1d4ed8;
+      }
+
+      .export-button:active {
+        background: #1e40af;
+      }
+
+      .answer-section {
+        margin-top: 12px;
+        border-top: 1px dashed #d1d5db;
+        padding-top: 8px;
+      }
+
+      .show-answer-btn {
+        background: #10b981;
+        color: white;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      .show-answer-btn:hover {
+        background: #059669;
+      }
+
+      .answer-content {
+        display: none;
+        margin-top: 8px;
+        padding: 12px;
+        background: #f0fdf4;
+        border-left: 3px solid #10b981;
+        border-radius: 4px;
+      }
+
+      .answer-content.visible {
+        display: block;
+      }
+
+      .correct-answer {
+        font-weight: 600;
+        color: #059669;
+        margin-bottom: 8px;
+      }
+
+      .explanation {
+        font-size: 13px;
+        color: #374151;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Revisão – Inteligência Artificial / Aprendizado de Máquina</h1>
+      <p>Marque suas respostas para estudo e revisão.</p>
+    </header>
+
+    <main>
+      <form>
+        <!-- 1 -->
+        <div class="question">
+          <div class="question-title">1)</div>
+          <div class="question-text">
+            Em relação aos algoritmos de busca informada, considere as
+            afirmativas:<br />
+            I. O algoritmo A* é ótimo e completo quando utiliza uma heurística
+            admissível.<br />
+            II. A busca gulosa (greedy) sempre encontra a solução ótima por
+            expandir menos nós que o A*.<br />
+            III. Uma heurística consistente (monótona) é sempre admissível, mas
+            uma heurística admissível não é necessariamente consistente.<br />
+            Assinale a alternativa correta:
+          </div>
+          <div class="options">
+            <label
+              ><input type="radio" name="q1" value="A" /> A) Apenas I é
+              verdadeira</label
+            >
+            <label
+              ><input type="radio" name="q1" value="B" /> B) Apenas I e III são
+              verdadeiras</label
+            >
+            <label
+              ><input type="radio" name="q1" value="C" /> C) Apenas II e III são
+              verdadeiras</label
+            >
+            <label
+              ><input type="radio" name="q1" value="D" /> D) Todas são
+              verdadeiras</label
+            >
+            <label
+              ><input type="radio" name="q1" value="E" /> E) Apenas I e II são
+              verdadeiras</label
+            >
+          </div>
+          <div class="answer-section">
+            <button
+              type="button"
+              class="show-answer-btn"
+              id="btn-1"
+              onclick="toggleAnswer(1)"
+            >
+              👁️ Mostrar Resposta
+            </button>
+            <div class="answer-content" id="answer-1">
+              <div class="correct-answer">
+                ✓ Resposta Correta: B) Apenas I e III são verdadeiras
+              </div>
+              <div class="explanation">
+                <strong>Explicação Detalhada:</strong><br /><br />
+                <strong>📚 O que são algoritmos de busca informada?</strong
+                ><br />
+                São algoritmos que usam informação adicional (heurística) para
+                guiar a busca de forma mais eficiente que buscas cegas.
+                Exemplos: A*, busca gulosa.<br /><br />
+
+                <strong>Análise das afirmativas:</strong><br />
+                <strong>I. VERDADEIRA ✓</strong> - O A* usa f(n) = g(n) + h(n),
+                onde g(n) é o custo real até o nó e h(n) é a heurística. Se h(n)
+                for admissível (nunca superestima), o A* SEMPRE encontra o
+                caminho mais curto (é ótimo) e sempre encontra solução se ela
+                existir (é completo).<br /><br />
+
+                <strong>II. FALSA ✗</strong> - A busca gulosa usa APENAS h(n),
+                ignorando o custo já percorrido. Ela é rápida mas pode cair em
+                caminhos ruins. Não garante solução ótima! Exemplo: pode
+                escolher um caminho que parece bom no início mas é péssimo no
+                total.<br /><br />
+
+                <strong>III. VERDADEIRA ✓</strong> - Heurística consistente
+                (h(n) ≤ custo(n,n') + h(n')) sempre é admissível. Mas uma
+                heurística admissível pode não ser consistente. Consistência é
+                uma propriedade mais forte.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="question">
+          <div class="question-title">2)</div>
+          <div class="question-text">
+            No contexto de Redes Neurais Convolucionais (CNNs), qual das
+            seguintes afirmações sobre operações de pooling está INCORRETA?
+          </div>
+          <div class="options">
+            <label
+              ><input type="radio" name="q2" value="A" /> A) Max pooling
+              seleciona o valor máximo em cada região da janela</label
+            >
+            <label
+              ><input type="radio" name="q2" value="B" /> B) Average pooling
+              calcula a média dos valores na janela</label
+            >
+            <label
+              ><input type="radio" name="q2" value="C" /> C) Pooling reduz a
+              dimensionalidade espacial da representação</label
+            >
+            <label
+              ><input type="radio" name="q2" value="D" /> D) Pooling aumenta o
+              número de parâmetros treináveis da rede</label
+            >
+            <label
+              ><input type="radio" name="q2" value="E" /> E) Pooling ajuda a
+              criar invariância a pequenas translações</label
+            >
+          </div>
+          <div class="answer-section">
+            <button
+              type="button"
+              class="show-answer-btn"
+              id="btn-2"
+              onclick="toggleAnswer(2)"
+            >
+              👁️ Mostrar Resposta
+            </button>
+            <div class="answer-content" id="answer-2">
+              <div class="correct-answer">
+                ✓ Resposta Correta: D) Pooling aumenta o número de parâmetros
+                treináveis da rede
+              </div>
+              <div class="explanation">
+                <strong>Explicação Detalhada:</strong><br /><br />
+                <strong>📚 O que é Pooling em CNNs?</strong><br />
+                Pooling é uma operação que reduz o tamanho das imagens/features
+                em uma CNN. Imagina uma janela 2x2 que desliza pela imagem
+                pegando resumos de cada região.<br /><br />
+
+                <strong>Por que a alternativa D está INCORRETA:</strong><br />
+                Pooling NÃO tem parâmetros treináveis! É só uma operação
+                matemática fixa (tipo tirar o máximo ou média). Não aprende
+                nada, não tem pesos.<br /><br />
+
+                <strong>As outras alternativas explicadas:</strong><br />
+                • <strong>Max pooling:</strong> Pega o maior valor da janela
+                (ex: [1,2,3,4] → 4)<br />
+                • <strong>Average pooling:</strong> Calcula a média (ex:
+                [1,2,3,4] → 2.5)<br />
+                • <strong>Reduz dimensionalidade:</strong> Uma imagem 100x100
+                vira 50x50 após pooling 2x2<br />
+                • <strong>Invariância:</strong> Se a imagem mover 1 pixel, o max
+                pooling pode dar o mesmo resultado<br /><br />
+
+                <strong>💡 Resumo:</strong> Pooling simplifica a rede, reduz
+                custo computacional e ajuda a generalizar, mas não adiciona
+                complexidade ao modelo.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="question">
+          <div class="question-title">3)</div>
+          <div class="question-text">
+            Em um problema de classificação multiclasse com 5 classes usando
+            Redes Neurais, a camada de saída utiliza função de ativação softmax.
+            Se as saídas antes da softmax (logits) são [2.0, 1.0, 0.1, 3.0,
+            0.5], qual propriedade matemática a função softmax garante?
+          </div>
+          <div class="options">
+            <label
+              ><input type="radio" name="q3" value="A" /> A) Todas as saídas
+              serão exatamente iguais a 0.2</label
+            >
+            <label
+              ><input type="radio" name="q3" value="B" /> B) A soma de todas as
+              probabilidades de saída será igual a 1</label
+            >
+            <label
+              ><input type="radio" name="q3" value="C" /> C) O maior logit
+              sempre resultará em probabilidade maior que 0.5</label
+            >
+            <label
+              ><input type="radio" name="q3" value="D" /> D) Valores negativos
+              de logits resultam em probabilidades negativas</label
+            >
+            <label
+              ><input type="radio" name="q3" value="E" /> E) A diferença entre
+              probabilidades consecutivas será constante</label
+            >
+          </div>
+          <div class="answer-section">
+            <button
+              type="button"
+              class="show-answer-btn"
+              id="btn-3"
+              onclick="toggleAnswer(3)"
+            >
+              👁️ Mostrar Resposta
+            </button>
+            <div class="answer-content" id="answer-3">
+              <div class="correct-answer">
+                ✓ Resposta Correta: B) A soma de todas as probabilidades de
+                saída será igual a 1
+              </div>
+              <div class="explanation">
+                <strong>Explicação Detalhada:</strong><br /><br />
+                <strong>📚 O que é Softmax?</strong><br />
+                Softmax transforma números quaisquer (logits) em probabilidades
+                válidas. É usada na última camada de redes neurais para
+                classificação multiclasse.<br /><br />
+
+                <strong>Fórmula:</strong> softmax(x_i) = e^(x_i) / Σ(e^(x_j))<br /><br />
+
+                <strong
+                  >Com os valores do exemplo [2.0, 1.0, 0.1, 3.0, 0.5]:</strong
+                ><br />
+                Após softmax: [0.10, 0.04, 0.01, 0.28, 0.02] (valores
+                aproximados)<br />
+                Soma = 0.10 + 0.04 + 0.01 + 0.28 + 0.02 = 1.00 ✓<br /><br />
+
+                <strong>Por que B está correta:</strong><br />
+                A propriedade FUNDAMENTAL do softmax é que a soma sempre dá 1,
+                transformando qualquer vetor em uma distribuição de
+                probabilidade válida. Assim você pode dizer "30% de chance de
+                ser classe A, 50% classe B, 20% classe C".<br /><br />
+
+                <strong>Por que as outras estão erradas:</strong><br />
+                • A) NÃO ficam iguais (0.2 seria se todos logits fossem
+                iguais)<br />
+                • C) O maior pode dar < 0.5 se houver muitas classes próximas<br />
+                • D) Softmax SEMPRE dá valores positivos (usa exponencial)<br />
+                • E) As diferenças não são constantes, dependem dos valores
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="question">
+          <div class="question-title">4)</div>
+          <div class="question-text">
+            Considere um problema de aprendizado por reforço onde um agente
+            navega em um ambiente com estados S, ações A, e função de recompensa
+            R. Qual das seguintes afirmações sobre Q-learning está correta?
+          </div>
+          <div class="options">
+            <label
+              ><input type="radio" name="q4" value="A" /> A) Q-learning é um
+              método on-policy que requer seguir a política sendo
+              aprendida</label
+            >
+            <label
+              ><input type="radio" name="q4" value="B" /> B) Q-learning converge
+              para a política ótima apenas em ambientes determinísticos</label
+            >
+            <label
+              ><input type="radio" name="q4" value="C" /> C) A equação de
+              atualização do Q-learning usa o valor máximo de Q para o próximo
+              estado</label
+            >
+            <label
+              ><input type="radio" name="q4" value="D" /> D) Q-learning não pode
+              ser usado em ambientes com espaços de estados contínuos</label
+            >
+            <label
+              ><input type="radio" name="q4" value="E" /> E) O fator de desconto
+              &gamma; deve sempre ser igual a 1 para convergência</label
+            >
+          </div>
+          <div class="answer-section">
+            <button
+              type="button"
+              class="show-answer-btn"
+              id="btn-4"
+              onclick="toggleAnswer(4)"
+            >
+              👁️ Mostrar Resposta
+            </button>
+            <div class="answer-content" id="answer-4">
+              <div class="correct-answer">
+                ✓ Resposta Correta: C) A equação de atualização do Q-learning
+                usa o valor máximo de Q para o próximo estado
+              </div>
+              <div class="explanation">
+                <strong>Explicação Detalhada:</strong><br /><br />
+                <strong>📚 O que é Q-learning?</strong><br />
+                É um algoritmo de Aprendizado por Reforço onde um agente aprende
+                a tomar decisões interagindo com um ambiente. O "Q" representa
+                "qualidade" de uma ação em determinado estado.<br /><br />
+
+                <strong>Fórmula do Q-learning:</strong><br />
+                Q(s,a) ← Q(s,a) + α[r + γ·max Q(s',a') - Q(s,a)]<br />
+                • s = estado atual, a = ação tomada<br />
+                • r = recompensa recebida<br />
+                • s' = próximo estado<br />
+                • max Q(s',a') = MELHOR ação possível no próximo estado<br />
+                • α = taxa de aprendizado, γ = fator de desconto<br /><br />
+
+                <strong>Por que C está correta:</strong><br />
+                A atualização usa o MÁXIMO Q do próximo estado. Isso é otimista:
+                "assuma que você vai tomar a melhor decisão no futuro".<br /><br />
+
+                <strong>Por que as outras estão erradas:</strong><br />
+                • A) Q-learning é OFF-policy (não precisa seguir a política que
+                está aprendendo)<br />
+                • B) Funciona SIM em ambientes estocásticos (com
+                aleatoriedade)<br />
+                • D) Pode ser usado em espaços contínuos (com Deep
+                Q-Learning/DQN)<br />
+                • E) γ pode ser < 1 (comum: 0.9 a 0.99). γ=1 pode não convergir
+                em problemas infinitos
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="question">
+          <div class="question-title">5)</div>
+          <div class="question-text">
+            Em árvores de decisão, o fenômeno de overfitting pode ser controlado
+            através de técnicas de poda. Qual das seguintes NÃO é uma estratégia
+            efetiva para reduzir overfitting em árvores de decisão?
+          </div>
+          <div class="options">
+            <label
+              ><input type="radio" name="q5" value="A" /> A) Limitar a
+              profundidade máxima da árvore</label
+            >
+            <label
+              ><input type="radio" name="q5" value="B" /> B) Estabelecer um
+              número mínimo de amostras por folha</label
+            >
+            <label
+              ><input type="radio" name="q5" value="C" /> C) Aumentar
+              indefinidamente o número de níveis da árvore</label
+            >
+            <label
+              ><input type="radio" name="q5" value="D" /> D) Usar poda
+              pós-crescimento (post-pruning)</label
+            >
+            <label
+              ><input type="radio" name="q5" value="E" /> E) Definir um ganho
+              mínimo de informação para divisão de nós</label
+            >
+          </div>
+          <div class="answer-section">
+            <button
+              type="button"
+              class="show-answer-btn"
+              id="btn-5"
+              onclick="toggleAnswer(5)"
+            >
+              👁️ Mostrar Resposta
+            </button>
+            <div class="answer-content" id="answer-5">
+              <div class="correct-answer">
+                ✓ Resposta Correta: C) Aumentar indefinidamente o número de
+                níveis da árvore
+              </div>
+              <div class="explanation">
+                <strong>Explicação Detalhada:</strong><br /><br />
+                <strong>📚 O que é Overfitting?</strong><br />
+                Overfitting acontece quando o modelo "decora" os dados de treino
+                mas não generaliza para dados novos. É tipo estudar decorando as
+                respostas sem entender - funciona na prova que você viu, mas não
+                em questões novas.<br /><br />
+
+                <strong>Árvores de Decisão:</strong><br />
+                São modelos que fazem perguntas sequenciais tipo: "idade > 30?"
+                → sim/não → próxima pergunta. Quanto mais profunda a árvore,
+                mais específicas as regras.<br /><br />
+
+                <strong
+                  >Por que C está INCORRETA (não reduz overfitting):</strong
+                ><br />
+                Árvore muito profunda = regras super específicas = MEMORIZA os
+                dados! Exemplo: "Se idade=27 E salário=3542 E cidade=X E choveu
+                terça..." → isso é overfit puro!<br /><br />
+
+                <strong>Técnicas que REALMENTE reduzem overfitting:</strong
+                ><br />
+                • <strong>A) Profundidade máxima:</strong> "Pare em 5 níveis" -
+                força generalização<br />
+                • <strong>B) Amostras mínimas:</strong> "Só divida se tiver 20+
+                exemplos" - evita regras para casos raros<br />
+                • <strong>D) Poda:</strong> Crescer a árvore e depois cortar
+                galhos ruins<br />
+                • <strong>E) Ganho mínimo:</strong> "Só divida se melhorar
+                bastante" - evita divisões inúteis<br /><br />
+
+                <strong>💡 Regra de ouro:</strong> Árvore grande = decoreba.
+                Árvore controlada = aprendizado real.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="question">
+          <div class="question-title">6)</div>
+          <div class="question-text">
+            No contexto de Support Vector Machines (SVM), o que acontece quando
+            o parâmetro de regularização C é aumentado significativamente?
+          </div>
+          <div class="options">
+            <label
+              ><input type="radio" name="q6" value="A" /> A) A margem de
+              separação aumenta e o modelo tolera mais erros de
+              classificação</label
+            >
+            <label
+              ><input type="radio" name="q6" value="B" /> B) A margem diminui e
+              o modelo se torna mais sensível a outliers (overfitting)</label
+            >
+            <label
+              ><input type="radio" name="q6" value="C" /> C) O número de support
+              vectors aumenta proporcionalmente</label
+            >
+            <label
+              ><input type="radio" name="q6" value="D" /> D) O modelo se torna
+              equivalente a uma regressão linear</label
+            >
+            <label
+              ><input type="radio" name="q6" value="E" /> E) A complexidade
+              computacional diminui exponencialmente</label
+            >
+          </div>
+          <div class="answer-section">
+            <button
+              type="button"
+              class="show-answer-btn"
+              id="btn-6"
+              onclick="toggleAnswer(6)"
+            >
+              👁️ Mostrar Resposta
+            </button>
+            <div class="answer-content" id="answer-6">
+              <div class="correct-answer">
+                ✓ Resposta Correta: B) A margem diminui e o modelo se torna mais
+                sensível a outliers (overfitting)
+              </div>
+              <div class="explanation">
+                <strong>Explicação Detalhada:</strong><br /><br />
+                <strong>📚 O que é SVM (Support Vector Machine)?</strong><br />
+                SVM é um algoritmo que traça uma linha (ou hiperplano) para
+                separar duas classes. O objetivo é encontrar a linha que deixa a
+                MAIOR margem possível entre as classes.<br /><br />
+
+                <strong>O que é a margem?</strong><br />
+                É a "faixa de segurança" entre a linha de separação e os pontos
+                mais próximos de cada classe. Margem grande = modelo mais
+                confiável.<br /><br />
+
+                <strong>O que é o parâmetro C?</strong><br />
+                C controla a tolerância a erros:<br />
+                • <strong>C pequeno (ex: 0.1):</strong> "Tá ok errar alguns
+                pontos, quero margem GRANDE" → generaliza melhor<br />
+                • <strong>C grande (ex: 100):</strong> "NÃO PODE ERRAR!" →
+                margem pequena, passa pertinho dos pontos → OVERFITTING<br /><br />
+
+                <strong>Por que B está correta:</strong><br />
+                Quando C aumenta muito, o modelo tenta classificar PERFEITAMENTE
+                todos os pontos de treino, incluindo outliers (pontos
+                estranhos/ruído). A margem fica apertada e o modelo fica
+                sensível demais.<br /><br />
+
+                <strong>Analogia:</strong><br />
+                C alto = andar numa corda bamba fininha (margem pequena,
+                perigoso)<br />
+                C baixo = andar numa ponte larga (margem grande, seguro)<br /><br />
+
+                <strong>Por que as outras estão erradas:</strong><br />
+                • A) Margem DIMINUI (não aumenta) e tolera MENOS erros<br />
+                • C) Número de support vectors geralmente diminui<br />
+                • D) SVM nunca vira regressão linear<br />
+                • E) Complexidade aumenta (não diminui)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="question">
+          <div class="question-title">7)</div>
+          <div class="question-text">
+            Em redes neurais recorrentes (RNNs), o problema de gradientes que
+            explodem (exploding gradients) pode ser mitigado através de:
+          </div>
+          <div class="options">
+            <label
+              ><input type="radio" name="q7" value="A" /> A) Aumento da taxa de
+              aprendizado</label
+            >
+            <label
+              ><input type="radio" name="q7" value="B" /> B) Remoção de todas as
+              camadas ocultas</label
+            >
+            <label
+              ><input type="radio" name="q7" value="C" /> C) Gradient clipping
+              (limitação do gradiente)</label
+            >
+            <label
+              ><input type="radio" name="q7" value="D" /> D) Uso exclusivo de
+              função de ativação sigmoid</label
+            >
+            <label
+              ><input type="radio" name="q7" value="E" /> E) Aumento do tamanho
+              do batch</label
+            >
+          </div>
+          <div class="answer-section">
+            <button
+              type="button"
+              class="show-answer-btn"
+              id="btn-7"
+              onclick="toggleAnswer(7)"
+            >
+              👁️ Mostrar Resposta
+            </button>
+            <div class="answer-content" id="answer-7">
+              <div class="correct-answer">
+                ✓ Resposta Correta: C) Gradient clipping (limitação do
+                gradiente)
+              </div>
+              <div class="explanation">
+                <strong>Explicação Detalhada:</strong><br /><br />
+                <strong>📚 O que são RNNs?</strong><br />
+                Redes Neurais Recorrentes processam sequências (texto, áudio,
+                séries temporais). Elas têm "memória" para lembrar informação
+                anterior.<br /><br />
+
+                <strong>O que são gradientes?</strong><br />
+                Durante o treino, o modelo calcula gradientes (derivadas) para
+                saber como ajustar os pesos. É tipo "quanto devo mexer em cada
+                botão para melhorar".<br /><br />
+
+                <strong
+                  >Problema: Exploding Gradients (Gradientes Explosivos)</strong
+                ><br />
+                Em RNNs longas, os gradientes podem EXPLODIR (ficar GIGANTES
+                tipo 10⁹⁰). Isso causa:<br />
+                • Valores numéricos infinitos (NaN)<br />
+                • Pesos malucos<br />
+                • Treino que não converge<br /><br />
+
+                <strong>Por que C está correta: Gradient Clipping</strong><br />
+                É tipo colocar um limitador de velocidade:<br />
+                "Se o gradiente passar de 5, corta pra 5"<br />
+                Pseudo-código: if (gradient > 5): gradient = 5<br /><br />
+                Isso previne updates muito grandes que desestabilizam o treino.
+                É a solução padrão para RNNs!<br /><br />
+
+                <strong>Por que as outras estão erradas:</strong><br />
+                • A) Aumentar taxa de aprendizado PIORA o problema (updates
+                ainda maiores!)<br />
+                • B) Remover camadas destrói o modelo<br />
+                • D) Sigmoid não resolve (e tem outros problemas)<br />
+                • E) Tamanho do batch não afeta gradientes explosivos<br /><br />
+
+                <strong>Outras soluções:</strong> Usar LSTM ou GRU (arquiteturas
+                que amenizam o problema naturalmente)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="question">
+          <div class="question-title">8)</div>
+          <div class="question-text">
+            No algoritmo de clustering K-means, considere as seguintes
+            afirmativas:<br />
+            I. O resultado final depende da inicialização dos centroides.<br />
+            II. O algoritmo sempre converge para o ótimo global.<br />
+            III. É necessário especificar o número de clusters K
+            antecipadamente.<br />
+            Assinale a alternativa correta:
+          </div>
+          <div class="options">
+            <label
+              ><input type="radio" name="q8" value="A" /> A) Apenas I é
+              verdadeira</label
+            >
+            <label
+              ><input type="radio" name="q8" value="B" /> B) Apenas I e II são
+              verdadeiras</label
+            >
+            <label
+              ><input type="radio" name="q8" value="C" /> C) Apenas I e III são
+              verdadeiras</label
+            >
+            <label
+              ><input type="radio" name="q8" value="D" /> D) Apenas II e III são
+              verdadeiras</label
+            >
+            <label
+              ><input type="radio" name="q8" value="E" /> E) Todas são
+              verdadeiras</label
+            >
+          </div>
+          <div class="answer-section">
+            <button
+              type="button"
+              class="show-answer-btn"
+              id="btn-8"
+              onclick="toggleAnswer(8)"
+            >
+              👁️ Mostrar Resposta
+            </button>
+            <div class="answer-content" id="answer-8">
+              <div class="correct-answer">
+                ✓ Resposta Correta: C) Apenas I e III são verdadeiras
+              </div>
+              <div class="explanation">
+                <strong>Explicação Detalhada:</strong><br /><br />
+                <strong>📚 O que é K-means?</strong><br />
+                É um algoritmo de clustering (agrupamento) que divide dados em K
+                grupos. Exemplo: agrupar clientes em 3 perfis (economizadores,
+                gastadores, moderados).<br /><br />
+
+                <strong>Como funciona:</strong><br />
+                1. Escolhe K pontos aleatórios como centróides (centros dos
+                grupos)<br />
+                2. Associa cada ponto ao centróide mais próximo<br />
+                3. Recalcula os centróides (média dos pontos do grupo)<br />
+                4. Repete até estabilizar<br /><br />
+
+                <strong>Análise das afirmativas:</strong><br /><br />
+                <strong>I. VERDADEIRA ✓</strong> - "Resultado depende da
+                inicialização"<br />
+                Se começar com centróides ruins, pode ficar preso em solução
+                ruim. Por isso:<br />
+                • Roda várias vezes com inicializações diferentes<br />
+                • Usa K-means++ (escolha inteligente dos centróides iniciais)<br /><br />
+
+                <strong>II. FALSA ✗</strong> - "Sempre converge para ótimo
+                global"<br />
+                ERRADO! K-means converge apenas para ótimo LOCAL (melhor solução
+                na vizinhança).<br />
+                Analogia: Você procura o ponto mais alto, mas pode ficar preso
+                num morrinho ao invés de achar a montanha gigante!<br /><br />
+
+                <strong>III. VERDADEIRA ✓</strong> - "Precisa especificar K"<br />
+                Você DEVE dizer quantos grupos quer ANTES de rodar. Não descobre
+                automaticamente.<br /><br />
+
+                <strong>Como escolher K?</strong><br />
+                • Método do cotovelo (elbow method)<br />
+                • Silhouette score<br />
+                • Domínio do problema ("meu negócio tem 3 tipos de cliente")
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="question">
+          <div class="question-title">9)</div>
+          <div class="question-text">
+            Em um modelo de regressão logística para classificação binária, qual
+            função de perda (loss function) é tipicamente utilizada?
+          </div>
+          <div class="options">
+            <label
+              ><input type="radio" name="q9" value="A" /> A) Erro quadrático
+              médio (MSE)</label
+            >
+            <label
+              ><input type="radio" name="q9" value="B" /> B) Entropia cruzada
+              binária (Binary Cross-Entropy)</label
+            >
+            <label
+              ><input type="radio" name="q9" value="C" /> C) Erro absoluto médio
+              (MAE)</label
+            >
+            <label
+              ><input type="radio" name="q9" value="D" /> D) Distância
+              euclidiana</label
+            >
+            <label
+              ><input type="radio" name="q9" value="E" /> E) Coeficiente de
+              correlação de Pearson</label
+            >
+          </div>
+          <div class="answer-section">
+            <button
+              type="button"
+              class="show-answer-btn"
+              id="btn-9"
+              onclick="toggleAnswer(9)"
+            >
+              👁️ Mostrar Resposta
+            </button>
+            <div class="answer-content" id="answer-9">
+              <div class="correct-answer">
+                ✓ Resposta Correta: B) Entropia cruzada binária (Binary
+                Cross-Entropy)
+              </div>
+              <div class="explanation">
+                <strong>Explicação Detalhada:</strong><br /><br />
+                <strong>📚 O que é Regressão Logística?</strong><br />
+                Apesar do nome "regressão", é usado para CLASSIFICAÇÃO binária
+                (sim/não, spam/não-spam, doente/saudável).<br />
+                Usa a função sigmoid para dar probabilidades entre 0 e 1.<br /><br />
+
+                <strong>O que é Função de Perda (Loss Function)?</strong><br />
+                Mede "quão errado" o modelo está. O treino tenta MINIMIZAR essa
+                função.<br /><br />
+
+                <strong
+                  >Por que B está correta: Binary Cross-Entropy (BCE)</strong
+                ><br />
+                Também chamada de Log Loss. Fórmula:<br />
+                BCE = -[y·log(p) + (1-y)·log(1-p)]<br /><br />
+                Onde:<br />
+                • y = classe real (0 ou 1)<br />
+                • p = probabilidade prevista (0 a 1)<br /><br />
+                <strong>Exemplo prático:</strong><br />
+                Classe real = 1 (spam), Modelo previu p=0.9<br />
+                BCE = -[1·log(0.9)] = 0.105 (erro pequeno, bom!)<br /><br />
+                Classe real = 1 (spam), Modelo previu p=0.1<br />
+                BCE = -[1·log(0.1)] = 2.303 (erro grande, ruim!)<br /><br />
+
+                <strong>Por que BCE é ideal para classificação:</strong><br />
+                • Penaliza muito predições confiantes e erradas<br />
+                • Trabalha naturalmente com probabilidades<br />
+                • Tem propriedades matemáticas que facilitam otimização<br /><br />
+
+                <strong>Por que as outras não são ideais:</strong><br />
+                • A) MSE é para regressão (prever números contínuos tipo
+                preços)<br />
+                • C) MAE também é para regressão<br />
+                • D) Distância euclidiana não é usada como loss<br />
+                • E) Correlação de Pearson é métrica, não loss function
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="question">
+          <div class="question-title">10)</div>
+          <div class="question-text">
+            No contexto de transfer learning com redes neurais profundas, qual
+            estratégia é mais apropriada quando o novo dataset é pequeno e
+            similar ao dataset original?
+          </div>
+          <div class="options">
+            <label
+              ><input type="radio" name="q10" value="A" /> A) Treinar toda a
+              rede do zero com inicialização aleatória</label
+            >
+            <label
+              ><input type="radio" name="q10" value="B" /> B) Congelar todas as
+              camadas exceto a camada de saída e treinar apenas esta</label
+            >
+            <label
+              ><input type="radio" name="q10" value="C" /> C) Descartar a rede
+              pré-treinada e usar um modelo mais simples</label
+            >
+            <label
+              ><input type="radio" name="q10" value="D" /> D) Treinar apenas as
+              primeiras camadas convolucionais</label
+            >
+            <label
+              ><input type="radio" name="q10" value="E" /> E) Usar apenas data
+              augmentation sem transfer learning</label
+            >
+          </div>
+          <div class="answer-section">
+            <button
+              type="button"
+              class="show-answer-btn"
+              id="btn-10"
+              onclick="toggleAnswer(10)"
+            >
+              👁️ Mostrar Resposta
+            </button>
+            <div class="answer-content" id="answer-10">
+              <div class="correct-answer">
+                ✓ Resposta Correta: B) Congelar todas as camadas exceto a camada
+                de saída e treinar apenas esta
+              </div>
+              <div class="explanation">
+                <strong>Explicação Detalhada:</strong><br /><br />
+                <strong>📚 O que é Transfer Learning?</strong><br />
+                É tipo "copiar a lição do nerd da sala". Você pega uma rede
+                neural já treinada (ex: no ImageNet com milhões de imagens) e
+                adapta para seu problema.<br /><br />
+
+                <strong>Por que usar Transfer Learning?</strong><br />
+                Treinar do zero precisa de:<br />
+                • MUITO tempo (dias/semanas)<br />
+                • MUITOS dados (milhões de exemplos)<br />
+                • MUITA GPU/dinheiro<br /><br />
+                Com transfer learning: horas + poucos dados + 1 GPU =
+                sucesso!<br /><br />
+
+                <strong>Cenário da questão:</strong><br />
+                • Dataset PEQUENO (poucos exemplos)<br />
+                • SIMILAR ao original (ex: ambos são fotos de animais)<br /><br />
+
+                <strong>Por que B é a melhor estratégia:</strong><br />
+                <strong>CONGELAR</strong> = não treinar, manter pesos fixos<br /><br />
+                As camadas convolucionais iniciais já aprenderam features
+                gerais:<br />
+                • Camada 1: detecta bordas, linhas<br />
+                • Camada 2: detecta texturas, formas simples<br />
+                • Camada 3: detecta partes de objetos (olhos, orelhas)<br />
+                • Última camada: classificação específica ("gato" vs
+                "cachorro")<br /><br />
+                Como o dataset é similar, as features já são úteis! Só
+                precisamos adaptar a CLASSIFICAÇÃO FINAL.<br /><br />
+                <strong>Vantagens:</strong><br />
+                • Rápido (treina poucos pesos)<br />
+                • Não dá overfitting (poucos parâmetros atualizados)<br />
+                • Funciona com poucos dados<br /><br />
+
+                <strong>Matriz de decisão:</strong><br />
+                Dataset pequeno + Similar → Congelar tudo exceto saída (resposta
+                B)<br />
+                Dataset pequeno + Diferente → Congelar quase tudo<br />
+                Dataset grande + Similar → Fine-tuning (treinar últimas
+                camadas)<br />
+                Dataset grande + Diferente → Treinar tudo do zero<br /><br />
+
+                <strong>Por que as outras estão erradas:</strong><br />
+                • A) Treinar do zero = precisa de MUITO mais dados (vai dar
+                overfitting!)<br />
+                • C) Jogar fora conhecimento valioso<br />
+                • D) Camadas iniciais são as que JÁ funcionam bem<br />
+                • E) Data augmentation ajuda mas não substitui transfer learning
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="question">
+          <div class="question-title">11)</div>
+          <div class="question-text">
+            Em um sistema especialista baseado em regras, qual componente é
+            responsável por controlar a aplicação das regras e resolver
+            conflitos quando múltiplas regras podem ser ativadas
+            simultaneamente?
+          </div>
+          <div class="options">
+            <label
+              ><input type="radio" name="q11" value="A" /> A) Base de
+              conhecimento</label
+            >
+            <label
+              ><input type="radio" name="q11" value="B" /> B) Motor de
+              inferência</label
+            >
+            <label
+              ><input type="radio" name="q11" value="C" /> C) Interface do
+              usuário</label
+            >
+            <label
+              ><input type="radio" name="q11" value="D" /> D) Base de
+              dados</label
+            >
+            <label
+              ><input type="radio" name="q11" value="E" /> E) Módulo de
+              explicação</label
+            >
+          </div>
+          <div class="answer-section">
+            <button
+              type="button"
+              class="show-answer-btn"
+              id="btn-11"
+              onclick="toggleAnswer(11)"
+            >
+              👁️ Mostrar Resposta
+            </button>
+            <div class="answer-content" id="answer-11">
+              <div class="correct-answer">
+                ✓ Resposta Correta: B) Motor de inferência
+              </div>
+              <div class="explanation">
+                <strong>Explicação Detalhada:</strong><br /><br />
+                <strong>📚 O que é um Sistema Especialista?</strong><br />
+                É um programa que imita a decisão de um especialista humano.
+                Exemplo: sistema que diagnostica doenças como um médico.<br /><br />
+
+                <strong>Componentes principais:</strong><br /><br />
+                <strong>1. Base de Conhecimento</strong><br />
+                Armazena as REGRAS (tipo "SE-ENTÃO"):<br />
+                • SE febre > 38°C E dor_de_garganta ENTÃO possível_gripe<br />
+                • SE possível_gripe E tosse ENTÃO recomendar_médico<br /><br />
+
+                <strong>2. Base de Dados (Working Memory)</strong><br />
+                Armazena os FATOS atuais:<br />
+                • febre = 39°C<br />
+                • dor_de_garganta = sim<br />
+                • tosse = não<br /><br />
+
+                <strong
+                  >3. Motor de Inferência (Inference Engine) ✓ RESPOSTA</strong
+                ><br />
+                É o "cérebro" do sistema! Ele:<br />
+                • <strong>Aplica as regras:</strong> Verifica quais regras podem
+                ser ativadas com os fatos atuais<br />
+                • <strong>Resolve conflitos:</strong> Se 3 regras podem ser
+                ativadas, qual usar primeiro?<br />
+                • <strong>Controla o fluxo:</strong> Forward chaining (dos fatos
+                à conclusão) ou backward chaining (da conclusão aos fatos)<br /><br />
+
+                <strong>Exemplo de conflito:</strong><br />
+                Regra A: SE febre ENTÃO dar_remédio_A<br />
+                Regra B: SE febre E idade>60 ENTÃO dar_remédio_B<br />
+                Ambas podem ser ativadas! O motor de inferência decide qual
+                executar baseado em prioridades.<br /><br />
+
+                <strong>Estratégias de resolução de conflitos:</strong><br />
+                • Prioridade por especificidade (regra mais específica
+                primeiro)<br />
+                • Ordem de definição<br />
+                • Regras mais recentes primeiro<br /><br />
+
+                <strong>4. Interface do Usuário</strong><br />
+                Permite interação (perguntas e respostas)<br /><br />
+
+                <strong>5. Módulo de Explicação</strong><br />
+                Explica POR QUE chegou em determinada conclusão<br /><br />
+
+                <strong>💡 Resumo:</strong> O Motor de Inferência é quem "pensa"
+                e decide qual regra usar!
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="question">
+          <div class="question-title">12)</div>
+          <div class="question-text">
+            Considere um problema de classificação com dataset desbalanceado
+            (95% classe negativa, 5% classe positiva). Qual técnica de
+            balanceamento NÃO é apropriada para melhorar o desempenho do modelo?
+          </div>
+          <div class="options">
+            <label
+              ><input type="radio" name="q12" value="A" /> A) SMOTE (Synthetic
+              Minority Over-sampling Technique)</label
+            >
+            <label
+              ><input type="radio" name="q12" value="B" /> B) Undersampling da
+              classe majoritária</label
+            >
+            <label
+              ><input type="radio" name="q12" value="C" /> C) Ajuste de pesos
+              das classes na função de perda</label
+            >
+            <label
+              ><input type="radio" name="q12" value="D" /> D) Ignorar
+              completamente o desbalanceamento e usar apenas acurácia</label
+            >
+            <label
+              ><input type="radio" name="q12" value="E" /> E) Ensemble de
+              modelos com diferentes proporções de classes</label
+            >
+          </div>
+          <div class="answer-section">
+            <button
+              type="button"
+              class="show-answer-btn"
+              id="btn-12"
+              onclick="toggleAnswer(12)"
+            >
+              👁️ Mostrar Resposta
+            </button>
+            <div class="answer-content" id="answer-12">
+              <div class="correct-answer">
+                ✓ Resposta Correta: D) Ignorar completamente o desbalanceamento
+                e usar apenas acurácia
+              </div>
+              <div class="explanation">
+                <strong>Explicação Detalhada:</strong><br /><br />
+                <strong>📚 O que é Dataset Desbalanceado?</strong><br />
+                Quando as classes têm quantidades muito diferentes. No exemplo:
+                95% negativos, 5% positivos.<br /><br />
+                <strong>Exemplos reais:</strong><br />
+                • Detecção de fraude: 99% transações normais, 1% fraudes<br />
+                • Diagnóstico de doença rara: 98% saudáveis, 2% doentes<br />
+                • Spam: 90% emails normais, 10% spam<br /><br />
+
+                <strong>O GRANDE PROBLEMA:</strong><br />
+                Um modelo "burro" que SEMPRE preveja "negativo" teria 95% de
+                acurácia!<br />
+                Mas ele é INUTIL - não detecta nenhum caso positivo!<br /><br />
+
+                <strong>Por que D está INCORRETA (não é apropriada):</strong
+                ><br />
+                Acurácia = (acertos totais) / (total de exemplos)<br /><br />
+                <strong>Exemplo prático:</strong><br />
+                1000 exemplos: 950 negativos, 50 positivos<br /><br />
+                Modelo idiota: sempre preveja "negativo"<br />
+                • Acertos: 950 (todos os negativos)<br />
+                • Erros: 50 (todos os positivos)<br />
+                • Acurácia: 950/1000 = 95% 🎉<br /><br />
+                MAS ELE NÃO SERVE PRA NADA! Nunca detecta fraudes/doenças!<br /><br />
+
+                <strong>Métricas corretas para dados desbalanceados:</strong
+                ><br />
+                • <strong>Precision:</strong> Dos que previ positivo, quantos
+                acertei?<br />
+                • <strong>Recall:</strong> Dos positivos reais, quantos
+                detectei?<br />
+                • <strong>F1-Score:</strong> Média harmônica de precision e
+                recall<br />
+                • <strong>AUC-ROC:</strong> Área sob a curva ROC<br /><br />
+
+                <strong>Técnicas APROPRIADAS (as outras alternativas):</strong
+                ><br /><br />
+                <strong>A) SMOTE ✓</strong><br />
+                Cria exemplos sintéticos da classe minoritária interpolando
+                entre exemplos existentes.<br /><br />
+                <strong>B) Undersampling ✓</strong><br />
+                Remove exemplos da classe majoritária para equilibrar.<br /><br />
+                <strong>C) Ajuste de pesos ✓</strong><br />
+                Dá peso maior aos erros da classe minoritária na função de
+                perda.<br />
+                Ex: erro em positivo conta 19x mais que erro em negativo.<br /><br />
+                <strong>E) Ensemble ✓</strong><br />
+                Treina vários modelos com diferentes balanços e combina
+                resultados.<br /><br />
+
+                <strong>💡 Regra de ouro:</strong> Em dados desbalanceados,
+                acurácia MENTE! Use outras métricas!
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 13 -->
+        <div class="question">
+          <div class="question-title">13)</div>
+          <div class="question-text">
+            No algoritmo de Gradient Boosting, qual das seguintes afirmações
+            está CORRETA?
+          </div>
+          <div class="options">
+            <label
+              ><input type="radio" name="q13" value="A" /> A) Todos os modelos
+              base são treinados em paralelo de forma independente</label
+            >
+            <label
+              ><input type="radio" name="q13" value="B" /> B) Cada novo modelo é
+              treinado para corrigir os erros dos modelos anteriores</label
+            >
+            <label
+              ><input type="radio" name="q13" value="C" /> C) O resultado final
+              é sempre a média simples de todos os modelos</label
+            >
+            <label
+              ><input type="radio" name="q13" value="D" /> D) Gradient Boosting
+              é menos propenso a overfitting que Random Forest</label
+            >
+            <label
+              ><input type="radio" name="q13" value="E" /> E) A taxa de
+              aprendizado não afeta o desempenho final do modelo</label
+            >
+          </div>
+          <div class="answer-section">
+            <button
+              type="button"
+              class="show-answer-btn"
+              id="btn-13"
+              onclick="toggleAnswer(13)"
+            >
+              👁️ Mostrar Resposta
+            </button>
+            <div class="answer-content" id="answer-13">
+              <div class="correct-answer">
+                ✓ Resposta Correta: B) Cada novo modelo é treinado para corrigir
+                os erros dos modelos anteriores
+              </div>
+              <div class="explanation">
+                <strong>Explicação Detalhada:</strong><br /><br />
+                <strong>📚 O que é Gradient Boosting?</strong><br />
+                É uma técnica de ensemble (combina vários modelos) onde cada
+                modelo novo tenta CORRIGIR os erros do anterior. É tipo trabalho
+                em equipe onde cada pessoa corrige os erros da anterior!<br /><br />
+
+                <strong>Como funciona (analogia simples):</strong><br />
+                <strong>Rodada 1:</strong> Modelo previu preço de casa = $200k
+                (real = $250k, erro = +$50k)<br />
+                <strong>Rodada 2:</strong> Novo modelo tenta prever o ERRO
+                ($50k)<br />
+                <strong>Rodada 3:</strong> Outro modelo corrige o erro do modelo
+                2<br />
+                <strong>Resultado final:</strong> Soma todas as previsões (com
+                pesos)<br /><br />
+
+                <strong>Por que B está correta:</strong><br />
+                O "Boosting" em Gradient Boosting significa que cada árvore nova
+                é treinada nos RESIDUOS (erros) das anteriores.<br /><br />
+                Processo:<br />
+                1. Treina modelo 1 nos dados<br />
+                2. Calcula erros do modelo 1<br />
+                3. Treina modelo 2 para prever esses ERROS<br />
+                4. Modelo_final = Modelo1 + α·Modelo2<br />
+                5. Repete até N modelos<br /><br />
+
+                <strong>Por que as outras estão erradas:</strong><br /><br />
+                <strong>A) FALSA</strong> - Modelos são treinados
+                SEQUENCIALMENTE, não em paralelo!<br />
+                (Random Forest treina em paralelo, Boosting é sequencial)<br /><br />
+
+                <strong>C) FALSA</strong> - Resultado é SOMA PONDERADA, não
+                média simples<br />
+                Fórmula: y = f1(x) + α·f2(x) + α²·f3(x) + ...<br />
+                Onde α = learning rate (taxa de aprendizado)<br /><br />
+
+                <strong>D) FALSA</strong> - Gradient Boosting é MAIS propenso a
+                overfitting!<br />
+                Por quê? Cada árvore nova se ajusta muito aos dados, inclusive
+                ruído.<br />
+                Soluções: usar learning rate baixo, limitar profundidade das
+                árvores<br /><br />
+
+                <strong>E) FALSA</strong> - Learning rate é CRUCIAL!<br />
+                • Learning rate alto (0.3): Rápido mas risco de overfitting<br />
+                • Learning rate baixo (0.01): Lento mas generaliza melhor<br /><br />
+
+                <strong>Algoritmos famosos de Gradient Boosting:</strong><br />
+                • XGBoost (muito usado em competições)<br />
+                • LightGBM (rápido)<br />
+                • CatBoost (bom com dados categóricos)<br /><br />
+
+                <strong>💡 Comparação:</strong><br />
+                Random Forest = Vários especialistas independentes votam<br />
+                Gradient Boosting = Especialistas trabalham em série, cada um
+                corrigindo o anterior
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 14 -->
+        <div class="question">
+          <div class="question-title">14)</div>
+          <div class="question-text">
+            Em Processamento de Linguagem Natural (NLP), embeddings de palavras
+            como Word2Vec capturam relações semânticas. Se temos os vetores: rei
+            - homem + mulher ≈ X, qual palavra X representa melhor essa relação
+            vetorial?
+          </div>
+          <div class="options">
+            <label
+              ><input type="radio" name="q14" value="A" /> A) Príncipe</label
+            >
+            <label><input type="radio" name="q14" value="B" /> B) Rainha</label>
+            <label
+              ><input type="radio" name="q14" value="C" /> C) Princesa</label
+            >
+            <label
+              ><input type="radio" name="q14" value="D" /> D) Monarca</label
+            >
+            <label
+              ><input type="radio" name="q14" value="E" /> E) Imperador</label
+            >
+          </div>
+          <div class="answer-section">
+            <button
+              type="button"
+              class="show-answer-btn"
+              id="btn-14"
+              onclick="toggleAnswer(14)"
+            >
+              👁️ Mostrar Resposta
+            </button>
+            <div class="answer-content" id="answer-14">
+              <div class="correct-answer">✓ Resposta Correta: B) Rainha</div>
+              <div class="explanation">
+                <strong>Explicação Detalhada:</strong><br /><br />
+                <strong>📚 O que são Word Embeddings?</strong><br />
+                São representações de palavras como VETORES numéricos. Palavras
+                com significados similares ficam próximas no espaço vetorial.<br /><br />
+
+                <strong>Exemplo simples (2D):</strong><br />
+                gato = [0.8, 0.2]<br />
+                cachorro = [0.9, 0.1]<br />
+                carro = [0.1, 0.9]<br /><br />
+                Gato e cachorro estão perto (ambos animais), carro está
+                longe!<br /><br />
+
+                <strong>Word2Vec:</strong><br />
+                Algoritmo que aprende embeddings treinando em MUITO texto.
+                Descobre relações semânticas incríveis!<br /><br />
+
+                <strong
+                  >Por que B está correta: A famosa analogia REI-RAINHA</strong
+                ><br /><br />
+                <strong>Operação vetorial:</strong><br />
+                vetor(rei) - vetor(homem) + vetor(mulher) ≈ vetor(rainha)<br /><br />
+                <strong>O que isso significa?</strong><br />
+                "Pegue o conceito de rei, remova o aspecto masculino, adicione o
+                aspecto feminino = rainha!"<br /><br />
+
+                <strong>Visualização (simplificada):</strong><br />
+                Imagine eixos:<br />
+                • Eixo X = masculino ↔ feminino<br />
+                • Eixo Y = comum ↔ realeza<br /><br />
+                homem = [-1, 0] (masculino, comum)<br />
+                mulher = [+1, 0] (feminino, comum)<br />
+                rei = [-1, +1] (masculino, realeza)<br />
+                rainha = [+1, +1] (feminino, realeza)<br /><br />
+                rei - homem + mulher = [-1,+1] - [-1,0] + [+1,0] = [+1,+1] =
+                rainha ✓<br /><br />
+
+                <strong>Outras analogias que funcionam:</strong><br />
+                • Paris - França + Itália ≈ Roma<br />
+                • Nadou - Nadar + Correr ≈ Correu<br />
+                • Grande - Maior + Pequeno ≈ Menor<br /><br />
+
+                <strong>Por que isso é importante?</strong><br />
+                Mostra que word embeddings capturam:<br />
+                • Relações de gênero<br />
+                • Relações geográficas<br />
+                • Relações gramaticais<br />
+                • Relações conceituais<br /><br />
+
+                <strong>Aplicações:</strong><br />
+                • Tradução automática<br />
+                • Análise de sentimento<br />
+                • Chatbots<br />
+                • Busca semântica<br /><br />
+
+                <strong>💡 Resumo:</strong> Word2Vec transforma palavras em
+                vetores que capturam significa MATEMÁTICO das relações entre
+                palavras!
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 15 -->
+        <div class="question">
+          <div class="question-title">15)</div>
+          <div class="question-text">
+            No contexto de regularização em aprendizado de máquina, qual das
+            seguintes afirmações sobre L1 (Lasso) e L2 (Ridge) está correta?
+          </div>
+          <div class="options">
+            <label
+              ><input type="radio" name="q15" value="A" /> A) L1 e L2 produzem
+              exatamente os mesmos resultados em todos os casos</label
+            >
+            <label
+              ><input type="radio" name="q15" value="B" /> B) L1 tende a
+              produzir soluções esparsas, zerando alguns pesos</label
+            >
+            <label
+              ><input type="radio" name="q15" value="C" /> C) L2 sempre zera
+              mais pesos que L1</label
+            >
+            <label
+              ><input type="radio" name="q15" value="D" /> D) Regularização L1 e
+              L2 aumentam o risco de underfitting em qualquer situação</label
+            >
+            <label
+              ><input type="radio" name="q15" value="E" /> E) L2 é mais
+              eficiente computacionalmente em datasets pequenos que L1</label
+            >
+          </div>
+          <div class="answer-section">
+            <button
+              type="button"
+              class="show-answer-btn"
+              id="btn-15"
+              onclick="toggleAnswer(15)"
+            >
+              👁️ Mostrar Resposta
+            </button>
+            <div class="answer-content" id="answer-15">
+              <div class="correct-answer">
+                ✓ Resposta Correta: B) L1 tende a produzir soluções esparsas,
+                zerando alguns pesos
+              </div>
+              <div class="explanation">
+                <strong>Explicação Detalhada:</strong><br /><br />
+                <strong>📚 O que é Regularização?</strong><br />
+                É adicionar uma "penalidade" no modelo para evitar que ele fique
+                complexo demais (overfitting). É tipo "vou te deixar usar esses
+                pesos, mas vou cobrar por isso!"<br /><br />
+
+                <strong>Função de perda COM regularização:</strong><br />
+                Loss_total = Loss_original + Penalidade_dos_pesos<br /><br />
+
+                <strong>Regularização L1 (Lasso):</strong><br />
+                Penalidade = λ × Σ|w_i|<br />
+                (soma dos valores ABSOLUTOS dos pesos)<br /><br />
+                <strong>Característica especial de L1:</strong> ZERA pesos!<br /><br />
+                Por quê? A penalidade |w| tem "quina" em zero. Durante
+                otimização, pesos pequenos são empurrados para exatamente 0.<br /><br />
+                <strong>Resultado:</strong><br />
+                Modelo final: w = [0.5, 0, 0, 2.1, 0, 0, 1.3, 0]<br />
+                Apenas 3 de 8 features são usadas! → SPARSIDADE (esparsidade)<br /><br />
+
+                <strong>Regularização L2 (Ridge):</strong><br />
+                Penalidade = λ × Σ(w_i²)<br />
+                (soma dos pesos ao QUADRADO)<br /><br />
+                <strong>Característica de L2:</strong> Reduz pesos mas raramente
+                zera<br /><br />
+                <strong>Resultado:</strong><br />
+                Modelo final: w = [0.3, 0.1, 0.05, 1.2, 0.08, 0.02, 0.9,
+                0.15]<br />
+                Todos os pesos pequenos mas nenhum zero<br /><br />
+
+                <strong>Por que B está correta:</strong><br />
+                L1 é útil para SELEÇÃO DE FEATURES!<br />
+                Se você tem 1000 features mas só 20 são relevantes, L1
+                automaticamente descobre e zera as 980 irrelevantes.<br /><br />
+
+                <strong>Quando usar cada uma:</strong><br /><br />
+                <strong>Use L1 quando:</strong><br />
+                • Você tem MUITAS features<br />
+                • Suspeita que muitas são irrelevantes<br />
+                • Quer um modelo INTERPRETAVEL (poucas features)<br />
+                • Quer seleção automática de features<br /><br />
+
+                <strong>Use L2 quando:</strong><br />
+                • Todas as features são potencialmente relevantes<br />
+                • Quer prevenir pesos muito grandes<br />
+                • Features são correlacionadas<br />
+                • Quer modelo mais estável<br /><br />
+
+                <strong>Elastic Net:</strong> Combina L1 + L2!<br />
+                Penalidade = λ₁×Σ|w| + λ₂×Σ(w²)<br />
+                Pega o melhor dos dois mundos!<br /><br />
+
+                <strong>Exemplo prático:</strong><br />
+                Preço de casa com 50 features (tamanho, quartos,
+                distância_praia, cor_parede, ...)<br /><br />
+                L1: Vai zerar features inúteis como "cor_parede"<br />
+                Resultado: Modelo usa só 5 features importantes<br /><br />
+                L2: Vai manter todas mas com pesos pequenos<br />
+                Resultado: Modelo usa todas as 50 features<br /><br />
+
+                <strong>💡 Mnemônico:</strong><br />
+                L1 = Less features (menos features, zera)<br />
+                L2 = Low weights (pesos baixos, não zera)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 16 -->
+        <div class="question">
+          <div class="question-title">16)</div>
+          <div class="question-text">
+            Em uma rede neural com 3 camadas ocultas usando função de ativação
+            ReLU, o que acontece quando um neurônio tem todos os pesos que levam
+            a ele negativos e recebe apenas entradas positivas?
+          </div>
+          <div class="options">
+            <label
+              ><input type="radio" name="q16" value="A" /> A) O neurônio sempre
+              produz saída positiva</label
+            >
+            <label
+              ><input type="radio" name="q16" value="B" /> B) O neurônio entra
+              em "dead ReLU" e sempre produz zero</label
+            >
+            <label
+              ><input type="radio" name="q16" value="C" /> C) O neurônio oscila
+              entre valores positivos e negativos</label
+            >
+            <label
+              ><input type="radio" name="q16" value="D" /> D) A rede
+              automaticamente ajusta para sigmoid</label
+            >
+            <label
+              ><input type="radio" name="q16" value="E" /> E) O neurônio mantém
+              sua saída anterior (memória)</label
+            >
+          </div>
+          <div class="answer-section">
+            <button
+              type="button"
+              class="show-answer-btn"
+              id="btn-16"
+              onclick="toggleAnswer(16)"
+            >
+              👁️ Mostrar Resposta
+            </button>
+            <div class="answer-content" id="answer-16">
+              <div class="correct-answer">
+                ✓ Resposta Correta: B) O neurônio entra em "dead ReLU" e sempre
+                produz zero
+              </div>
+              <div class="explanation">
+                <strong>Explicação Detalhada:</strong><br /><br />
+                <strong>📚 O que é ReLU?</strong><br />
+                ReLU (Rectified Linear Unit) é uma função de ativação muito
+                usada em redes neurais.<br /><br />
+                <strong>Fórmula:</strong> ReLU(x) = max(0, x)<br />
+                • Se x > 0 → retorna x<br />
+                • Se x ≤ 0 → retorna 0<br /><br />
+
+                <strong>Cenário da questão:</strong><br />
+                • Neurônio tem pesos NEGATIVOS: w = [-0.5, -0.3, -0.8]<br />
+                • Entradas são POSITIVAS: x = [2, 3, 1]<br /><br />
+
+                <strong>Cálculo passo a passo:</strong><br />
+                1. Soma ponderada: z = w·x = (-0.5)×2 + (-0.3)×3 + (-0.8)×1 =
+                -1.0 - 0.9 - 0.8 = -2.7<br />
+                2. Ativação ReLU: a = ReLU(-2.7) = max(0, -2.7) = 0<br /><br />
+                Saída = 0 sempre!<br /><br />
+
+                <strong>Por que B está correta: Dead ReLU Problem</strong
+                ><br /><br />
+                <strong>O que acontece no treino:</strong><br />
+                1. Neurônio produz saída = 0<br />
+                2. Backpropagation calcula gradiente<br />
+                3. Derivada de ReLU em x<0 = 0<br />
+                4. Gradiente = 0 → pesos NÃO ATUALIZAM!<br />
+                5. Neurônio fica "morto" para sempre 💀<br /><br />
+
+                <strong>Analogia:</strong><br />
+                É tipo um estudante que tirou zero na primeira prova e desistiu
+                de estudar. Ele nunca vai melhorar porque parou de tentar!<br /><br />
+
+                <strong>Problema na prática:</strong><br />
+                Se muitos neurônios "morrem", a rede perde capacidade. Pode
+                perder 20-30% dos neurônios!<br /><br />
+
+                <strong>Causas comuns de Dead ReLU:</strong><br />
+                • Taxa de aprendizado muito alta<br />
+                • Inicialização ruim dos pesos<br />
+                • Gradientes grandes empurram pesos para valores negativos<br /><br />
+
+                <strong>Soluções:</strong><br /><br />
+                <strong>1. Leaky ReLU:</strong><br />
+                LeakyReLU(x) = max(0.01x, x)<br />
+                Em vez de zero, retorna 0.01x quando negativo<br />
+                Gradiente pequeno mas existe! Neurônio pode "reviver"<br /><br />
+
+                <strong>2. Parametric ReLU (PReLU):</strong><br />
+                PReLU(x) = max(αx, x)<br />
+                Onde α é aprendido durante o treino<br /><br />
+
+                <strong>3. ELU (Exponential Linear Unit):</strong><br />
+                ELU(x) = x se x>0, senão α(e^x - 1)<br /><br />
+
+                <strong>4. Inicialização He:</strong><br />
+                Inicializar pesos corretamente (He initialization)<br />
+                Reduz chance de neurônios começarem "mortos"<br /><br />
+
+                <strong>5. Usar Batch Normalization:</strong><br />
+                Normaliza entradas, reduz valores extremos<br /><br />
+
+                <strong>Por que as outras estão erradas:</strong><br />
+                • A) Saída é sempre ZERO (não positiva)<br />
+                • C) Não oscila, fica travado em zero<br />
+                • D) Não muda automaticamente para sigmoid<br />
+                • E) ReLU não tem memória (isso seria LSTM/GRU)<br /><br />
+
+                <strong>💡 Resumo:</strong> Dead ReLU = neurônio em coma que
+                nunca acorda. Use Leaky ReLU para dar "sinal vital"!
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 17 -->
+        <div class="question">
+          <div class="question-title">17)</div>
+          <div class="question-text">
+            No algoritmo Expectation-Maximization (EM) para Gaussian Mixture
+            Models (GMM), qual é a função do passo E (Expectation)?
+          </div>
+          <div class="options">
+            <label
+              ><input type="radio" name="q17" value="A" /> A) Atualizar os
+              parâmetros das gaussianas (média e covariância)</label
+            >
+            <label
+              ><input type="radio" name="q17" value="B" /> B) Calcular a
+              probabilidade posterior de cada ponto pertencer a cada
+              cluster</label
+            >
+            <label
+              ><input type="radio" name="q17" value="C" /> C) Determinar o
+              número ótimo de componentes do modelo</label
+            >
+            <label
+              ><input type="radio" name="q17" value="D" /> D) Inicializar
+              aleatoriamente os centroides</label
+            >
+            <label
+              ><input type="radio" name="q17" value="E" /> E) Calcular a função
+              de perda final do modelo</label
+            >
+          </div>
+          <div class="answer-section">
+            <button
+              type="button"
+              class="show-answer-btn"
+              id="btn-17"
+              onclick="toggleAnswer(17)"
+            >
+              👁️ Mostrar Resposta
+            </button>
+            <div class="answer-content" id="answer-17">
+              <div class="correct-answer">
+                ✓ Resposta Correta: B) Calcular a probabilidade posterior de
+                cada ponto pertencer a cada cluster
+              </div>
+              <div class="explanation">
+                <strong>Explicação Detalhada:</strong><br /><br />
+                <strong>📚 O que é GMM (Gaussian Mixture Model)?</strong><br />
+                É um algoritmo de clustering que assume que os dados vêm de uma
+                MISTURA de distribuições gaussianas (normais).<br /><br />
+
+                <strong>Diferença para K-means:</strong><br />
+                • <strong>K-means:</strong> "Cada ponto pertence a UM cluster"
+                (hard assignment)<br />
+                • <strong>GMM:</strong> "Cada ponto tem PROBABILIDADE de
+                pertencer a cada cluster" (soft assignment)<br /><br />
+
+                <strong>Exemplo:</strong><br />
+                Ponto X: 70% cluster A, 25% cluster B, 5% cluster C<br /><br />
+
+                <strong>O que é EM (Expectation-Maximization)?</strong><br />
+                É o algoritmo usado para treinar GMM. Tem 2 passos que se
+                alternam:<br /><br />
+
+                <strong>PASSO E (Expectation) ✓ RESPOSTA CORRETA</strong><br />
+                <strong>"Expectativa":</strong> Dado os parâmetros atuais, qual
+                a probabilidade de cada ponto pertencer a cada cluster?<br /><br />
+                <strong>Cálculo:</strong><br />
+                Para cada ponto x_i e cada cluster k:<br />
+                P(cluster k | x_i) = probabilidade posterior<br /><br />
+                Usa Teorema de Bayes:<br />
+                P(k|x) = [P(x|k) × P(k)] / P(x)<br /><br />
+                <strong>Resultado do passo E:</strong><br />
+                Matriz de responsabilidades (responsibilities)<br />
+                Cada linha = um ponto<br />
+                Cada coluna = probabilidade de pertencer a cada cluster<br /><br />
+                Exemplo:<br />
+                Ponto 1: [0.9, 0.05, 0.05]<br />
+                Ponto 2: [0.1, 0.8, 0.1]<br />
+                Ponto 3: [0.2, 0.3, 0.5]<br /><br />
+
+                <strong>PASSO M (Maximization)</strong><br />
+                <strong>"Maximização":</strong> Dado as probabilidades, atualize
+                os parâmetros para maximizar a verossimilhança.<br /><br />
+                <strong>Atualiza:</strong><br />
+                • Médias (μ) de cada gaussiana<br />
+                • Covariâncias (Σ) de cada gaussiana<br />
+                • Pesos (π) de cada componente<br /><br />
+
+                <strong>Algoritmo completo:</strong><br />
+                1. <strong>Inicialização:</strong> Escolhe parâmetros iniciais
+                aleatórios<br />
+                2. <strong>Passo E:</strong> Calcula probabilidades (resposta
+                B)<br />
+                3. <strong>Passo M:</strong> Atualiza parâmetros<br />
+                4. Repete 2-3 até convergência<br /><br />
+
+                <strong>Exemplo prático com 2 clusters:</strong><br /><br />
+                <strong>Iteração 1:</strong><br />
+                Passo E: "Baseado nas gaussianas atuais, ponto X tem 60% chance
+                de ser cluster 1"<br />
+                Passo M: "Baseado nessas probabilidades, ajuste a média do
+                cluster 1 para 5.2"<br /><br />
+                <strong>Iteração 2:</strong><br />
+                Passo E: "Com novos parâmetros, ponto X agora tem 75% chance de
+                ser cluster 1"<br />
+                Passo M: "Ajuste a média do cluster 1 para 5.5"<br /><br />
+                Continua até estabilizar...<br /><br />
+
+                <strong>Por que as outras estão erradas:</strong><br />
+                • A) Atualizar parâmetros é o passo M (não E)<br />
+                • C) Número de componentes é escolhido ANTES (como K no
+                K-means)<br />
+                • D) Inicialização é feita ANTES do EM começar<br />
+                • E) Função de perda é calculada mas não é o objetivo do passo
+                E<br /><br />
+
+                <strong>Vantagens do GMM sobre K-means:</strong><br />
+                • Clusters podem ter formas elípticas (não só círculos)<br />
+                • Dá probabilidades (melhor para incerteza)<br />
+                • Clusters podem ter tamanhos diferentes<br /><br />
+
+                <strong>💡 Mnemônico:</strong><br />
+                <strong>E</strong>xpectation = <strong>E</strong>stimar
+                probabilidades<br />
+                <strong>M</strong>aximization = <strong>M</strong>udar
+                parâmetros
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 18 -->
+        <div class="question">
+          <div class="question-title">18)</div>
+          <div class="question-text">
+            Em validação cruzada k-fold, considere k = 5 e um dataset com 1000
+            exemplos. Em cada iteração, quantos exemplos são usados para
+            treinamento e quantos para validação, respectivamente?
+          </div>
+          <div class="options">
+            <label
+              ><input type="radio" name="q18" value="A" /> A) 500 para
+              treinamento, 500 para validação</label
+            >
+            <label
+              ><input type="radio" name="q18" value="B" /> B) 900 para
+              treinamento, 100 para validação</label
+            >
+            <label
+              ><input type="radio" name="q18" value="C" /> C) 800 para
+              treinamento, 200 para validação</label
+            >
+            <label
+              ><input type="radio" name="q18" value="D" /> D) 750 para
+              treinamento, 250 para validação</label
+            >
+            <label
+              ><input type="radio" name="q18" value="E" /> E) 1000 para
+              treinamento, 200 para validação</label
+            >
+          </div>
+          <div class="answer-section">
+            <button
+              type="button"
+              class="show-answer-btn"
+              id="btn-18"
+              onclick="toggleAnswer(18)"
+            >
+              👁️ Mostrar Resposta
+            </button>
+            <div class="answer-content" id="answer-18">
+              <div class="correct-answer">
+                ✓ Resposta Correta: C) 800 para treinamento, 200 para validação
+              </div>
+              <div class="explanation">
+                <strong>Explicação Detalhada:</strong><br /><br />
+                <strong>📚 O que é Validação Cruzada (Cross-Validation)?</strong
+                ><br />
+                É uma técnica para avaliar modelos de forma mais confiável,
+                usando diferentes subconjuntos dos dados para treino e
+                validação.<br /><br />
+
+                <strong>Por que usar?</strong><br />
+                • Uma única divisão treino/teste pode dar sorte ou azar<br />
+                • Cross-validation dá resultado mais confiável<br />
+                • Usa todos os dados tanto para treino quanto validação<br /><br />
+
+                <strong>K-Fold Cross-Validation:</strong><br />
+                Divide os dados em K partes (folds) iguais<br /><br />
+
+                <strong>Cálculo para k=5 e 1000 exemplos:</strong><br /><br />
+                1. Divide 1000 exemplos em 5 partes: 1000 ÷ 5 = 200 exemplos por
+                parte<br /><br />
+                2. Em cada iteração:<br />
+                • 1 parte para VALIDAÇÃO = 200 exemplos<br />
+                • 4 partes para TREINAMENTO = 4 × 200 = 800 exemplos<br /><br />
+                <strong
+                  >Por que C está correta: 800 treino, 200 validação ✓</strong
+                ><br /><br />
+
+                <strong>Visualização do processo completo:</strong><br /><br />
+                Dataset: [Part1][Part2][Part3][Part4][Part5]<br />
+                Cada parte tem 200 exemplos<br /><br />
+                <strong>Iteração 1:</strong><br />
+                Validação: [Part1]<br />
+                Treinamento: [Part2][Part3][Part4][Part5]<br />
+                → Treina modelo, avalia em Part1, guarda resultado<br /><br />
+                <strong>Iteração 2:</strong><br />
+                Validação: [Part2]<br />
+                Treinamento: [Part1][Part3][Part4][Part5]<br />
+                → Treina novo modelo, avalia em Part2<br /><br />
+                <strong>Iteração 3:</strong><br />
+                Validação: [Part3]<br />
+                Treinamento: [Part1][Part2][Part4][Part5]<br /><br />
+                <strong>Iteração 4:</strong><br />
+                Validação: [Part4]<br />
+                Treinamento: [Part1][Part2][Part3][Part5]<br /><br />
+                <strong>Iteração 5:</strong><br />
+                Validação: [Part5]<br />
+                Treinamento: [Part1][Part2][Part3][Part4]<br /><br />
+                <strong>Resultado final:</strong> Média dos 5 resultados!<br /><br />
+
+                <strong>Fórmula geral:</strong><br />
+                • Tamanho de cada fold = N / k<br />
+                • Validação por iteração = N / k<br />
+                • Treinamento por iteração = N - (N/k) = N × (k-1)/k<br /><br />
+                Para k=5, N=1000:<br />
+                • Validação = 1000/5 = 200 ✓<br />
+                • Treinamento = 1000 × 4/5 = 800 ✓<br /><br />
+
+                <strong>Valores comuns de k:</strong><br />
+                • <strong>k=5:</strong> Rápido, boa estimativa (80% treino, 20%
+                validação)<br />
+                • <strong>k=10:</strong> Mais comum, bom balanço (90% treino,
+                10% validação)<br />
+                • <strong>k=N (LOOCV):</strong> Leave-One-Out, usa N-1 para
+                treino, 1 para validação. Muito lento mas preciso<br /><br />
+
+                <strong>Vantagens:</strong><br />
+                • Todos os dados são usados para validação<br />
+                • Reduz variância da estimativa<br />
+                • Melhor uso de dados limitados<br /><br />
+
+                <strong>Desvantagens:</strong><br />
+                • k vezes mais lento (treina k modelos)<br />
+                • Não adequado para datasets MUITO grandes<br /><br />
+
+                <strong>Quando usar:</strong><br />
+                • Dataset pequeno/médio<br />
+                • Quando precisa de estimativa confiável<br />
+                • Escolha de hiperparâmetros<br />
+                • Comparação de modelos<br /><br />
+
+                <strong>💡 Lembrete:</strong> Em k-fold, usa (k-1)/k para treino
+                e 1/k para validação!
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 19 -->
+        <div class="question">
+          <div class="question-title">19)</div>
+          <div class="question-text">
+            No contexto de Redes Adversariais Generativas (GANs), qual é o
+            objetivo do discriminador durante o treinamento?
+          </div>
+          <div class="options">
+            <label
+              ><input type="radio" name="q19" value="A" /> A) Gerar novas
+              amostras sintéticas realistas</label
+            >
+            <label
+              ><input type="radio" name="q19" value="B" /> B) Distinguir entre
+              amostras reais e amostras geradas pelo gerador</label
+            >
+            <label
+              ><input type="radio" name="q19" value="C" /> C) Comprimir as
+              dimensões dos dados de entrada</label
+            >
+            <label
+              ><input type="radio" name="q19" value="D" /> D) Classificar as
+              imagens em múltiplas categorias</label
+            >
+            <label
+              ><input type="radio" name="q19" value="E" /> E) Otimizar apenas a
+              função de perda do gerador</label
+            >
+          </div>
+          <div class="answer-section">
+            <button
+              type="button"
+              class="show-answer-btn"
+              id="btn-19"
+              onclick="toggleAnswer(19)"
+            >
+              👁️ Mostrar Resposta
+            </button>
+            <div class="answer-content" id="answer-19">
+              <div class="correct-answer">
+                ✓ Resposta Correta: B) Distinguir entre amostras reais e
+                amostras geradas pelo gerador
+              </div>
+              <div class="explanation">
+                <strong>Explicação Detalhada:</strong><br /><br />
+                <strong
+                  >📚 O que são GANs (Generative Adversarial Networks)?</strong
+                ><br />
+                São duas redes neurais que "competem" uma contra a outra para
+                gerar dados realistas (imagens, áudio, texto).<br /><br />
+
+                <strong>Analogia simples:</strong><br />
+                • <strong>Gerador:</strong> Falsificador tentando criar dinheiro
+                falso<br />
+                • <strong>Discriminador:</strong> Policial tentando detectar o
+                dinheiro falso<br /><br />
+                Conforme o falsificador melhora, o policial também precisa
+                melhorar. No final, o dinheiro falso fica perfeito!<br /><br />
+
+                <strong>As duas redes:</strong><br /><br />
+                <strong>1. GERADOR (G):</strong><br />
+                <strong>Entrada:</strong> Ruído aleatório (vetor de números
+                aleatórios)<br />
+                <strong>Saída:</strong> Imagem/dado sintético<br />
+                <strong>Objetivo:</strong> Enganar o discriminador<br /><br />
+                Exemplo: [0.5, 0.2, 0.9, ...] (ruído) → Imagem de gato falso<br /><br />
+
+                <strong>2. DISCRIMINADOR (D) ✓ RESPOSTA</strong><br />
+                <strong>Entrada:</strong> Imagem (real OU gerada)<br />
+                <strong>Saída:</strong> Probabilidade de ser REAL (0 a 1)<br />
+                <strong>Objetivo:</strong> Classificar corretamente<br /><br />
+                Exemplo:<br />
+                • Imagem real → saída = 0.95 (95% chance de real) ✓<br />
+                • Imagem falsa → saída = 0.05 (5% chance de real) ✓<br /><br />
+
+                <strong>Por que B está correta:</strong><br />
+                O discriminador é um CLASSIFICADOR BINÁRIO:<br />
+                • Classe 0: Imagem falsa (do gerador)<br />
+                • Classe 1: Imagem real (do dataset)<br /><br />
+                Sua tarefa é DISTINGUIR/DIFERENCIAR as duas!<br /><br />
+
+                <strong>Processo de treinamento (jogo adversarial):</strong
+                ><br /><br />
+                <strong>Rodada 1:</strong><br />
+                1. Gerador cria imagens ruins (início do treino)<br />
+                2. Discriminador facilmente identifica as falsas<br />
+                3. Discriminador: "Essas são obviamente falsas!" (saída =
+                0.01)<br /><br />
+                <strong>Rodada 100:</strong><br />
+                1. Gerador melhorou, cria imagens melhores<br />
+                2. Discriminador precisa ser mais esperto<br />
+                3. Discriminador: "Hmm, essa parece 60% real" (saída = 0.6)<br /><br />
+                <strong>Rodada 10000:</strong><br />
+                1. Gerador cria imagens quase perfeitas<br />
+                2. Discriminador em dúvida<br />
+                3. Discriminador: "Não sei, 50/50" (saída = 0.5)<br /><br />
+
+                <strong>Equilíbrio de Nash (objetivo final):</strong><br />
+                Quando o discriminador não consegue mais distinguir (sempre dá
+                50%), o gerador venceu!<br /><br />
+
+                <strong>Funções de perda:</strong><br /><br />
+                <strong>Discriminador quer MAXIMIZAR:</strong><br />
+                L_D = log(D(x_real)) + log(1 - D(G(z)))<br />
+                "Quero dar valor alto pra reais e baixo pra falsas"<br /><br />
+                <strong>Gerador quer MINIMIZAR:</strong><br />
+                L_G = log(1 - D(G(z)))<br />
+                "Quero que o discriminador dê valor alto pras minhas falsas"<br /><br />
+
+                <strong>Aplicações de GANs:</strong><br />
+                • Gerar rostos realistas (This Person Does Not Exist)<br />
+                • Criar arte (DALL-E tipo precursor)<br />
+                • Aumentar resolução de imagens (super-resolution)<br />
+                • Transferir estilo de imagens<br />
+                • Gerar vozes sintéticas<br />
+                • Criar personagens de jogos<br /><br />
+
+                <strong>Desafios no treino:</strong><br />
+                • Mode collapse (gerador só cria 1 tipo de imagem)<br />
+                • Instabilidade (um lado domina demais)<br />
+                • Difícil de convergir<br />
+                • Precisa balancear o treino das duas redes<br /><br />
+
+                <strong>Por que as outras estão erradas:</strong><br />
+                • A) GERAR amostras é trabalho do GERADOR<br />
+                • C) Comprimir dimensões seria autoencoder<br />
+                • D) Classificar em categorias seria CNN normal<br />
+                • E) Não otimiza só loss do gerador (tem seu próprio loss)<br /><br />
+
+                <strong>💡 Resumo:</strong><br />
+                Discriminador = Detetive que diz "real ou falso?"<br />
+                Gerador = Artista que tenta enganar o detetive
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 20 -->
+        <div class="question">
+          <div class="question-title">20)</div>
+          <div class="question-text">
+            Em aprendizado por reforço, a diferença fundamental entre exploração
+            (exploration) e exploração (exploitation) é:
+          </div>
+          <div class="options">
+            <label
+              ><input type="radio" name="q20" value="A" /> A) Exploration busca
+              maximizar recompensas imediatas; exploitation testa novas
+              ações</label
+            >
+            <label
+              ><input type="radio" name="q20" value="B" /> B) Exploration testa
+              ações desconhecidas; exploitation escolhe as melhores ações
+              conhecidas</label
+            >
+            <label
+              ><input type="radio" name="q20" value="C" /> C) Exploration é
+              usada apenas no início; exploitation apenas no final</label
+            >
+            <label
+              ><input type="radio" name="q20" value="D" /> D) Ambos os conceitos
+              são idênticos em valor esperado</label
+            >
+            <label
+              ><input type="radio" name="q20" value="E" /> E) Exploration requer
+              mais memória que exploitation</label
+            >
+          </div>
+          <div class="answer-section">
+            <button
+              type="button"
+              class="show-answer-btn"
+              id="btn-20"
+              onclick="toggleAnswer(20)"
+            >
+              👁️ Mostrar Resposta
+            </button>
+            <div class="answer-content" id="answer-20">
+              <div class="correct-answer">
+                ✓ Resposta Correta: B) Exploration testa ações desconhecidas;
+                exploitation escolhe as melhores ações conhecidas
+              </div>
+              <div class="explanation">
+                <strong>Explicação Detalhada:</strong><br /><br />
+                <strong
+                  >📚 O que é Aprendizado por Reforço (Reinforcement
+                  Learning)?</strong
+                ><br />
+                Um agente aprende a tomar decisões interagindo com um ambiente,
+                recebendo recompensas ou punições.<br /><br />
+                <strong>Exemplos:</strong><br />
+                • Robô aprendendo a andar (recompensa = distância percorrida)<br />
+                • Jogador de xadrez (recompensa = vitória)<br />
+                • Sistema de recomendação (recompensa = usuário clica)<br /><br />
+
+                <strong>O DILEMA: Exploration vs Exploitation</strong><br />
+                É o problema fundamental do aprendizado por reforço!<br /><br />
+
+                <strong>EXPLORATION (Exploração):</strong><br />
+                <strong>Definição:</strong> Tentar ações NOVAS/DESCONHECIDAS
+                para descobrir suas recompensas<br /><br />
+                <strong>Analogia:</strong> Experimentar restaurantes novos<br />
+                • "Nunca fui nessa pizzaria, vou testar!"<br />
+                • Pode ser ruim (perda de tempo)<br />
+                • Pode ser ÓTIMO (descobriu o melhor lugar!)<br /><br />
+                <strong>No RL:</strong> Escolher ação aleatória ou menos
+                testada<br /><br />
+
+                <strong>EXPLOITATION (Explotação):</strong><br />
+                <strong>Definição:</strong> Usar o conhecimento atual para
+                maximizar recompensa<br /><br />
+                <strong>Analogia:</strong> Ir no restaurante favorito<br />
+                • "Já sei que aquela pizzaria é boa, vou lá!"<br />
+                • Garantia de satisfação<br />
+                • Mas pode estar perdendo algo MELHOR<br /><br />
+                <strong>No RL:</strong> Escolher a melhor ação segundo Q-values
+                atuais<br /><br />
+
+                <strong>Por que B está correta:</strong><br />
+                Resume perfeitamente a diferença:<br />
+                • Exploration = Descobrir o desconhecido<br />
+                • Exploitation = Aproveitar o conhecido<br /><br />
+
+                <strong>O PROBLEMA do puro Exploitation:</strong><br />
+                Imagina que você testou 3 restaurantes:<br />
+                • Restaurante A: 7/10<br />
+                • Restaurante B: 5/10<br />
+                • Restaurante C: 6/10<br /><br />
+                Se só fazer exploitation, sempre vai no A (7/10).<br />
+                MAS existe um restaurante D (ainda não testado) que é 10/10!<br />
+                Você nunca vai descobrir se não explorar!<br /><br />
+
+                <strong>O PROBLEMA do puro Exploration:</strong><br />
+                Fica testando restaurantes aleatórios pra sempre.<br />
+                Perde tempo com lugares ruins.<br />
+                Nunca aproveita o conhecimento que já tem!<br /><br />
+
+                <strong>A SOLUÇÃO: Balancear ambos!</strong><br /><br />
+
+                <strong>Estratégias comuns:</strong><br /><br />
+                <strong>1. ε-greedy (epsilon-greedy):</strong><br />
+                • Com probabilidade ε (ex: 10%): EXPLORE (ação aleatória)<br />
+                • Com probabilidade 1-ε (ex: 90%): EXPLOIT (melhor ação
+                conhecida)<br /><br />
+                Exemplo: 90% das vezes vai no melhor restaurante, 10% testa algo
+                novo<br /><br />
+                <strong>2. ε-greedy decrescente:</strong><br />
+                • Início: ε = 1.0 (100% exploration)<br />
+                • Durante treino: ε diminui gradualmente<br />
+                • Final: ε = 0.01 (1% exploration)<br /><br />
+                Lógica: No início, explore muito. Depois de aprender, explore
+                pouco.<br /><br />
+                <strong>3. Softmax / Boltzmann:</strong><br />
+                Escolhe ações proporcionalmente aos Q-values<br />
+                Ações boas = maior chance, mas outras ainda possíveis<br /><br />
+                <strong>4. UCB (Upper Confidence Bound):</strong><br />
+                Dá preferência para ações promissoras E pouco testadas<br />
+                "Otimismo diante da incerteza"<br /><br />
+
+                <strong>Exemplo prático (Pac-Man):</strong><br /><br />
+                <strong>Exploration:</strong><br />
+                "Vou testar esse corredor novo que nunca explorei"<br />
+                → Pode achar atalho ou muitas moedas!<br />
+                → Ou pode ter fantasma e morrer<br /><br />
+                <strong>Exploitation:</strong><br />
+                "Já sei que esse caminho é seguro e tem moedas"<br />
+                → Garante pontuação<br />
+                → Mas talvez perca oportunidades melhores<br /><br />
+
+                <strong>Quando explorar mais:</strong><br />
+                • Início do treinamento<br />
+                • Ambiente mudou<br />
+                • Alto custo de errar é aceitável<br /><br />
+
+                <strong>Quando exploitar mais:</strong><br />
+                • Final do treinamento / produção<br />
+                • Alto custo de errar<br />
+                • Já conhece bem o ambiente<br /><br />
+
+                <strong>Por que as outras estão erradas:</strong><br />
+                • A) INVERTEU! Exploration testa novas, exploitation maximiza
+                conhecidas<br />
+                • C) Ambos são necessários durante TODO o treino (com proporções
+                variando)<br />
+                • D) São MUITO diferentes em propósito e resultado<br />
+                • E) Memória não é o fator diferenciador<br /><br />
+
+                <strong>💡 Regra de ouro:</strong><br />
+                Explore para DESCOBRIR oportunidades<br />
+                Exploite para APROVEITAR o que já sabe
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <div class="answers-hint">
+            Observação: este formulário é apenas para marcação manual e estudo.
+            Nenhum dado é enviado ou salvo automaticamente.
+          </div>
+          <button type="button" class="export-button" onclick="exportAnswers()">
+            📥 Exportar Respostas para TXT
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <script>
+      function toggleAnswer(questionNumber) {
+        const answerContent = document.getElementById(
+          `answer-${questionNumber}`
+        );
+        const button = document.getElementById(`btn-${questionNumber}`);
+
+        if (answerContent.classList.contains("visible")) {
+          answerContent.classList.remove("visible");
+          button.textContent = "👁️ Mostrar Resposta";
+        } else {
+          answerContent.classList.add("visible");
+          button.textContent = "🙈 Ocultar Resposta";
+        }
+      }
+
+      function exportAnswers() {
+        const form = document.querySelector("form");
+        let content =
+          "REVISÃO - INTELIGÊNCIA ARTIFICIAL / APRENDIZADO DE MÁQUINA\n";
+        content += "Data: " + new Date().toLocaleString("pt-BR") + "\n";
+        content += "=".repeat(70) + "\n\n";
+
+        // Coletar todas as respostas
+        for (let i = 1; i <= 20; i++) {
+          const selected = form.querySelector(`input[name="q${i}"]:checked`);
+          const questionText = document
+            .querySelectorAll(".question")
+            [i - 1].querySelector(".question-text")
+            .textContent.trim();
+
+          content += `Questão ${i}:\n`;
+          content +=
+            questionText
+              .split("\n")
+              .map((line) => line.trim())
+              .filter((line) => line)
+              .join(" ") + "\n";
+
+          if (selected) {
+            const selectedLabel = selected.parentElement.textContent.trim();
+            content += `Resposta: ${selectedLabel}\n`;
+          } else {
+            content += "Resposta: [NÃO RESPONDIDA]\n";
+          }
+          content += "\n" + "-".repeat(70) + "\n\n";
+        }
+
+        // Criar o arquivo e fazer download
+        const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "revisao-ia-ml-respostas.txt";
+        link.click();
+        URL.revokeObjectURL(link.href);
+      }
+    </script>
+  </body>
+</html>
