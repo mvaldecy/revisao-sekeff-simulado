@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Revisão – Sistemas Operacionais</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f3f4f6;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #111827;
+      color: #f9fafb;
+      padding: 16px 24px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    header p {
+      margin: 4px 0 0;
+      font-size: 13px;
+      color: #d1d5db;
+    }
+
+    .nav {
+      margin-top: 8px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 24px auto;
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: #1f2937;
+    }
+
+    .intro {
+      font-size: 0.95rem;
+      color: #444;
+      margin-bottom: 1.5rem;
+    }
+
+    .question {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .question:last-child {
+      border-bottom: none;
+    }
+
+    .question-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .options label {
+      display: block;
+      margin: 0.2rem 0;
+      cursor: pointer;
+    }
+
+    .options input[type="radio"] {
+      margin-right: 0.4rem;
+    }
+
+    details {
+      margin-top: 0.5rem;
+      background: #f3f6ff;
+      border-radius: 4px;
+      padding: 0.5rem 0.75rem;
+    }
+
+    details summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    details p {
+      margin: 0.4rem 0;
+      font-size: 0.9rem;
+    }
+
+    .resposta-correta {
+      font-weight: 700;
+    }
+
+    .codigo-questao {
+      font-weight: 700;
+      margin-right: 0.25rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Revisão – Sistemas Operacionais</h1>
+    <p>Marque suas respostas para estudo e revisão.</p>
+    <div class="nav">
+      <a href="index.html">IA / ML</a>
+      <a href="sistemas-operacionais.html">Sistemas Operacionais</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>Questões e respostas</h2>
+      <p class="intro">
+        Marque suas respostas em cada questão e, quando quiser validar o raciocínio, expanda o bloco
+        “Mostrar resposta e explicação”.
+      </p>
+
+      <ol>
+
+      <!-- 1 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">1.</span>
+          Sobre a função do Sistema Operacional, qual opção descreve corretamente seu papel?
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q1" />A) Executar diretamente todos os programas de usuário no modo núcleo.</label>
+          <label><input type="radio" name="q1" />B) Criar uma interface entre hardware e aplicação, gerenciando recursos.</label>
+          <label><input type="radio" name="q1" />C) Substituir o hardware em caso de falhas.</label>
+          <label><input type="radio" name="q1" />D) Impedir que múltiplos programas sejam executados simultaneamente.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>O sistema operacional atua como intermediário entre hardware e aplicações, alocando CPU, memória, E/S e demais recursos para os processos de forma controlada.</p>
+        </details>
+      </li>
+
+      <!-- 2 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">2.</span>
+          Em relação aos modos de operação da CPU, o modo núcleo permite:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q2" />A) Execução de qualquer instrução, incluindo acesso direto ao hardware.</label>
+          <label><input type="radio" name="q2" />B) Apenas operações aritméticas de usuário.</label>
+          <label><input type="radio" name="q2" />C) Acesso limitado aos registradores especiais.</label>
+          <label><input type="radio" name="q2" />D) Execução somente de chamadas POSIX.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: A</p>
+          <p>No modo núcleo (kernel mode), a CPU pode executar instruções privilegiadas, como configurar dispositivos, manipular tabelas internas e acessar diretamente o hardware.</p>
+        </details>
+      </li>
+
+      <!-- 3 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">3.</span>
+          Uma system call é acionada por meio de:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q3" />A) Interrupção de hardware.</label>
+          <label><input type="radio" name="q3" />B) Instrução TRAP, que troca para modo núcleo.</label>
+          <label><input type="radio" name="q3" />C) Polling contínuo.</label>
+          <label><input type="radio" name="q3" />D) DMA direto para memória.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>A chamada de sistema usa uma instrução de software (TRAP/SYSCALL) que gera uma interrupção de software e transfere a execução para o kernel em modo núcleo.</p>
+        </details>
+      </li>
+
+      <!-- 4 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">4.</span>
+          O mecanismo que permite multitarefa real em SOs modernos é:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q4" />A) Polling constante dos dispositivos.</label>
+          <label><input type="radio" name="q4" />B) Multiprogramação com alternância de contexto.</label>
+          <label><input type="radio" name="q4" />C) Execução sem memória virtual.</label>
+          <label><input type="radio" name="q4" />D) Acesso direto dos programas ao disco.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>A multiprogramação, combinada com troca de contexto rápida, permite que múltiplos processos aparentem executar em paralelo, compartilhando a CPU de forma intercalada.</p>
+        </details>
+      </li>
+
+      <!-- 5 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">5.</span>
+          O uso de registradores mapeados em memória (Memory-Mapped I/O) permite:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q5" />A) Que a CPU execute instruções IN e OUT.</label>
+          <label><input type="radio" name="q5" />B) Que dispositivos sejam acessados como posições de memória.</label>
+          <label><input type="radio" name="q5" />C) A separação total entre E/S e espaço de endereçamento.</label>
+          <label><input type="radio" name="q5" />D) Redução automática de conflitos com cache.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>Em memory-mapped I/O, os registradores de dispositivos ocupam endereços no espaço de memória, permitindo acesso via instruções normais de load/store.</p>
+        </details>
+      </li>
+
+      <!-- 6 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">6.</span>
+          Considere o código de espera ocupada (busy waiting). Sua principal desvantagem é:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q6" />A) Baixa compatibilidade POSIX.</label>
+          <label><input type="radio" name="q6" />B) Alto desperdício de ciclos de CPU.</label>
+          <label><input type="radio" name="q6" />C) Excesso de interrupções.</label>
+          <label><input type="radio" name="q6" />D) Falta de previsibilidade temporal.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>No busy waiting, o processo fica em loop consultando uma condição, consumindo CPU mesmo sem fazer trabalho útil, o que degrada o aproveitamento do processador.</p>
+        </details>
+      </li>
+
+      <!-- 7 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">7.</span>
+          Em E/S orientada a interrupções, a CPU:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q7" />A) Espera continuamente o dispositivo finalizar.</label>
+          <label><input type="radio" name="q7" />B) Só executa uma tarefa de cada vez.</label>
+          <label><input type="radio" name="q7" />C) É notificada apenas quando a operação termina.</label>
+          <label><input type="radio" name="q7" />D) Copia os dados diretamente para RAM.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: C</p>
+          <p>Com E/S por interrupção, a CPU dispara a operação e continua executando outros processos; quando a E/S termina, o dispositivo gera uma interrupção para sinalizar a conclusão.</p>
+        </details>
+      </li>
+
+      <!-- 8 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">8.</span>
+          O DMA melhora o desempenho porque:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q8" />A) Permite que o SO ignore prioridades.</label>
+          <label><input type="radio" name="q8" />B) Evita que a CPU participe da transferência de dados.</label>
+          <label><input type="radio" name="q8" />C) Elimina page faults.</label>
+          <label><input type="radio" name="q8" />D) Só funciona com memória cache.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>O controlador DMA transfere blocos de dados entre dispositivo e memória sem intervenção da CPU a cada palavra, liberando o processador para outras tarefas.</p>
+        </details>
+      </li>
+
+      <!-- 9 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">9.</span>
+          Na hierarquia de memória, registradores são mais rápidos porque:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q9" />A) Estão fora da CPU.</label>
+          <label><input type="radio" name="q9" />B) São feitos do mesmo material e ficam dentro da CPU.</label>
+          <label><input type="radio" name="q9" />C) Operam em frequência mais baixa.</label>
+          <label><input type="radio" name="q9" />D) São voláteis.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>Registradores são implementados no próprio chip do processador, com tecnologia muito rápida e acesso direto pelo hardware, resultando no menor tempo de acesso.</p>
+        </details>
+      </li>
+
+      <!-- 10 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">10.</span>
+          A cache L1 é caracterizada por:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q10" />A) Maior capacidade e menor velocidade.</label>
+          <label><input type="radio" name="q10" />B) Estar sempre fora do chip.</label>
+          <label><input type="radio" name="q10" />C) Ser a mais rápida, porém menor.</label>
+          <label><input type="radio" name="q10" />D) Ser compartilhada por todos os núcleos sempre.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: C</p>
+          <p>A cache L1 é a camada de cache mais próxima do núcleo, com tamanho reduzido, porém baixíssima latência e alta velocidade de acesso.</p>
+        </details>
+      </li>
+
+      <!-- 11 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">11.</span>
+          O que ocorre em um cache miss?
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q11" />A) O dado é encontrado imediatamente na cache.</label>
+          <label><input type="radio" name="q11" />B) O bloco de memória é carregado da RAM para a cache.</label>
+          <label><input type="radio" name="q11" />C) A CPU muda para modo usuário.</label>
+          <label><input type="radio" name="q11" />D) A instrução é descartada.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>Quando ocorre um cache miss, o dado não está na cache e precisa ser buscado na memória principal, carregando o bloco correspondente para a cache.</p>
+        </details>
+      </li>
+
+      <!-- 12 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">12.</span>
+          O pipeline de instruções permite:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q12" />A) Executar várias instruções em paralelo, dividindo-as em estágios.</label>
+          <label><input type="radio" name="q12" />B) Executar apenas uma instrução de cada vez.</label>
+          <label><input type="radio" name="q12" />C) Desabilitar a cache automaticamente.</label>
+          <label><input type="radio" name="q12" />D) Reduzir a memória usada pelos programas.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: A</p>
+          <p>No pipeline, diferentes estágios (busca, decodificação, execução etc.) operam simultaneamente em instruções diferentes, aumentando o throughput da CPU.</p>
+        </details>
+      </li>
+
+      <!-- 13 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">13.</span>
+          Um processador superescalar diferencia-se por:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q13" />A) Possuir apenas um estágio de execução.</label>
+          <label><input type="radio" name="q13" />B) Executar múltiplas instruções completas ao mesmo tempo.</label>
+          <label><input type="radio" name="q13" />C) Não usar pipeline.</label>
+          <label><input type="radio" name="q13" />D) Evitar execução fora de ordem (out-of-order).</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>Arquiteturas superescalares possuem múltiplas unidades funcionais, permitindo despachar e completar várias instruções por ciclo de clock.</p>
+        </details>
+      </li>
+
+      <!-- 14 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">14.</span>
+          Em multithreading (por exemplo, Intel Hyper-Threading):
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q14" />A) Existem múltiplos núcleos físicos reais.</label>
+          <label><input type="radio" name="q14" />B) Cada thread lógica compartilha o mesmo núcleo físico.</label>
+          <label><input type="radio" name="q14" />C) Não existe alternância de contexto.</label>
+          <label><input type="radio" name="q14" />D) Só funciona com DMA ativo.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>No multithreading simultâneo, duas (ou mais) threads lógicas utilizam o mesmo núcleo físico, compartilhando unidades funcionais e registradores físicos.</p>
+        </details>
+      </li>
+
+      <!-- 15 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">15.</span>
+          Em arquiteturas multinúcleo (multi-core):
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q15" />A) Núcleos lógicos simulam paralelismo.</label>
+          <label><input type="radio" name="q15" />B) Cada núcleo físico executa tarefas realmente em paralelo.</label>
+          <label><input type="radio" name="q15" />C) Não existe cache.</label>
+          <label><input type="radio" name="q15" />D) O SO não consegue distinguir os núcleos.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>Em processadores multi-core, cada núcleo físico pode executar um fluxo de instruções independente, oferecendo paralelismo real ao sistema operacional.</p>
+        </details>
+      </li>
+
+      <!-- 16 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">16.</span>
+          No modelo POSIX, a função <code>fork()</code> faz:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q16" />A) Finaliza um processo.</label>
+          <label><input type="radio" name="q16" />B) Copia o processo atual, criando um processo filho.</label>
+          <label><input type="radio" name="q16" />C) Substitui a imagem do processo.</label>
+          <label><input type="radio" name="q16" />D) Aguarda processo filho terminar.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p><code>fork()</code> cria um novo processo (filho) praticamente idêntico ao processo pai, que continua a execução a partir do ponto da chamada.</p>
+        </details>
+      </li>
+
+      <!-- 17 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">17.</span>
+          Em <code>execve()</code>, o processo:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q17" />A) Cria uma thread paralela.</label>
+          <label><input type="radio" name="q17" />B) Continua executando a instrução seguinte.</label>
+          <label><input type="radio" name="q17" />C) É substituído completamente por um novo programa.</label>
+          <label><input type="radio" name="q17" />D) Apenas carrega variáveis de ambiente.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: C</p>
+          <p><code>execve()</code> troca a imagem do processo atual, carregando um novo programa no mesmo PID e iniciando a execução desse novo código.</p>
+        </details>
+      </li>
+
+      <!-- 18 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">18.</span>
+          A função <code>waitpid()</code> é utilizada para:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q18" />A) Criar processos filhos.</label>
+          <label><input type="radio" name="q18" />B) Suspender permanentemente um processo.</label>
+          <label><input type="radio" name="q18" />C) Esperar por um processo filho específico.</label>
+          <label><input type="radio" name="q18" />D) Transferir memória entre processos.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: C</p>
+          <p><code>waitpid()</code> permite ao processo pai aguardar a terminação de um filho específico, recuperando seu status de saída.</p>
+        </details>
+      </li>
+
+      <!-- 19 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">19.</span>
+          O parâmetro <code>WEXITSTATUS(status)</code> retorna:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q19" />A) O PID do processo pai.</label>
+          <label><input type="radio" name="q19" />B) O código de saída de um processo finalizado normalmente.</label>
+          <label><input type="radio" name="q19" />C) O sinal responsável pela morte do processo.</label>
+          <label><input type="radio" name="q19" />D) A prioridade da CPU.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>Após <code>wait</code>/<code>waitpid</code>, usa-se <code>WEXITSTATUS</code> para extrair, do status retornado, o valor de saída definido pelo processo (por exemplo, <code>exit(0)</code>, <code>exit(1)</code> etc.).</p>
+        </details>
+      </li>
+
+      <!-- 20 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">20.</span>
+          Em sistemas batch da segunda geração (1955–1965):
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q20" />A) Os usuários tinham interação em tempo real com o computador.</label>
+          <label><input type="radio" name="q20" />B) As tarefas eram processadas sequencialmente por meio de cartões ou fitas.</label>
+          <label><input type="radio" name="q20" />C) O terminal era conectado diretamente ao mainframe.</label>
+          <label><input type="radio" name="q20" />D) A multiprogramação já estava consolidada.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>Na era dos sistemas batch, os jobs eram agrupados e processados em lote, sem interação online, utilizando cartões perfurados ou fitas magnéticas.</p>
+        </details>
+      </li>
+
+      <!-- 21 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">21.</span>
+          O spooling surgiu para:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q21" />A) Substituir a RAM.</label>
+          <label><input type="radio" name="q21" />B) Armazenar operações de E/S em disco para otimizar throughput.</label>
+          <label><input type="radio" name="q21" />C) Sincronizar processos.</label>
+          <label><input type="radio" name="q21" />D) Impedir acesso concorrente ao processador.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>Spooling grava requisições de E/S em disco (por exemplo, filas de impressão), permitindo que o dispositivo trabalhe em ritmo próprio enquanto o sistema continua processando.</p>
+        </details>
+      </li>
+
+      <!-- 22 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">22.</span>
+          O timesharing trouxe como inovação principal:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q22" />A) Execução estritamente sequencial.</label>
+          <label><input type="radio" name="q22" />B) Interatividade via terminais com divisão da CPU.</label>
+          <label><input type="radio" name="q22" />C) Retorno ao uso de válvulas.</label>
+          <label><input type="radio" name="q22" />D) Proibição de multitarefa.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>O conceito de timesharing permite que vários usuários interajam ao mesmo tempo com o sistema, compartilhando a CPU por fatias de tempo (quantum).</p>
+        </details>
+      </li>
+
+      <!-- 23 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">23.</span>
+          No acesso via portas de E/S (arquitetura x86):
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q23" />A) Usa instruções dedicadas (IN, OUT).</label>
+          <label><input type="radio" name="q23" />B) Todos dispositivos usam cache.</label>
+          <label><input type="radio" name="q23" />C) Não há separação entre E/S e memória.</label>
+          <label><input type="radio" name="q23" />D) É obrigatório em sistemas ARM.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: A</p>
+          <p>No modelo baseado em portas, o processador utiliza instruções especiais de E/S (IN/OUT) e um espaço de endereçamento separado das instruções de memória.</p>
+        </details>
+      </li>
+
+      <!-- 24 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">24.</span>
+          Uma razão para usar portas de E/S em vez de mapeamento em memória é:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q24" />A) Reduzir espaço de endereçamento ocupado pela memória.</label>
+          <label><input type="radio" name="q24" />B) Aumentar conflitos com cache.</label>
+          <label><input type="radio" name="q24" />C) Tornar drivers mais simples.</label>
+          <label><input type="radio" name="q24" />D) Exigir menos instruções da CPU.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: A</p>
+          <p>Com portas de E/S, o espaço de endereços de memória não é consumido pelos registradores de dispositivos, liberando mais faixa para RAM.</p>
+        </details>
+      </li>
+
+      <!-- 25 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">25.</span>
+          No modelo de bloqueio de processos (bloqueio por I/O):
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q25" />A) O processo continua executando até completar a E/S.</label>
+          <label><input type="radio" name="q25" />B) O SO coloca o processo em estado de espera até o evento ocorrer.</label>
+          <label><input type="radio" name="q25" />C) O processo é finalizado.</label>
+          <label><input type="radio" name="q25" />D) O SO suspende definitivamente a CPU.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>Em bloqueio por I/O, o processo é removido da CPU e colocado em fila de espera, retornando ao estado pronto somente quando a operação de E/S é concluída.</p>
+        </details>
+      </li>
+
+      <!-- 26 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">26.</span>
+          A principal característica da RAM é:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q26" />A) Ser não volátil e permanente.</label>
+          <label><input type="radio" name="q26" />B) Ser mais rápida que registradores.</label>
+          <label><input type="radio" name="q26" />C) Perder o conteúdo quando desligado o sistema.</label>
+          <label><input type="radio" name="q26" />D) Ser usada como cache L1.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: C</p>
+          <p>A RAM é memória volátil: todos os dados armazenados são perdidos quando a alimentação elétrica é desligada.</p>
+        </details>
+      </li>
+
+      <!-- 27 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">27.</span>
+          A técnica de prefetching tenta:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q27" />A) Prever que dados serão usados e trazê-los antes para níveis superiores.</label>
+          <label><input type="radio" name="q27" />B) Desativar a cache para economizar energia.</label>
+          <label><input type="radio" name="q27" />C) Apagar blocos antigos aleatoriamente.</label>
+          <label><input type="radio" name="q27" />D) Aumentar espaço de armazenamento permanente.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: A</p>
+          <p>Prefetching tenta antecipar acessos futuros, carregando linhas de memória para a cache antes da necessidade real, reduzindo latência média.</p>
+        </details>
+      </li>
+
+      <!-- 28 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">28.</span>
+          Em um page fault:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q28" />A) O dado está na L1.</label>
+          <label><input type="radio" name="q28" />B) O dado não está na RAM e deve ser carregado do armazenamento secundário.</label>
+          <label><input type="radio" name="q28" />C) O processo é automaticamente reiniciado.</label>
+          <label><input type="radio" name="q28" />D) O sistema entra em modo de hibernação.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>O page fault ocorre quando a página referenciada não está na memória principal; o SO precisa carregá-la do disco para um frame livre da RAM.</p>
+        </details>
+      </li>
+
+      <!-- 29 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">29.</span>
+          Uma vantagem dos chips multinúcleo é:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q29" />A) Evitar paralelismo.</label>
+          <label><input type="radio" name="q29" />B) Reduzir troca de contexto entre threads.</label>
+          <label><input type="radio" name="q29" />C) Permitir execução paralela real entre vários núcleos.</label>
+          <label><input type="radio" name="q29" />D) Proibir hyper-threading.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: C</p>
+          <p>Com múltiplos núcleos físicos, o processador consegue executar múltiplos fluxos de instruções simultaneamente, explorando paralelismo em nível de chip.</p>
+        </details>
+      </li>
+
+      <!-- 30 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">30.</span>
+          GPUs são mais eficientes para:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q30" />A) Tarefas altamente paralelizáveis, com milhares de operações simples.</label>
+          <label><input type="radio" name="q30" />B) Processamento sequencial puro.</label>
+          <label><input type="radio" name="q30" />C) Execução de chamadas POSIX.</label>
+          <label><input type="radio" name="q30" />D) Sincronização de processos.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: A</p>
+          <p>GPUs possuem muitas unidades de processamento simples, ideais para workloads massivamente paralelos, como gráficos e alguns algoritmos de ciência de dados.</p>
+        </details>
+      </li>
+
+      <!-- 31 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">31.</span>
+          A TLB serve principalmente para:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q31" />A) Armazenar páginas completas da RAM.</label>
+          <label><input type="radio" name="q31" />B) Guardar traduções recentes de endereços virtuais para físicos, acelerando acessos.</label>
+          <label><input type="radio" name="q31" />C) Registrar processos que sofreram page fault.</label>
+          <label><input type="radio" name="q31" />D) Controlar prioridades de escalonamento.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>A TLB é um cache especializado de entradas de tabela de páginas, reduzindo o custo da tradução de endereços virtuais para físicos.</p>
+        </details>
+      </li>
+
+      <!-- 32 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">32.</span>
+          Quando ocorre um TLB miss:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q32" />A) O processador consulta a tabela de páginas na memória.</label>
+          <label><input type="radio" name="q32" />B) O acesso é automaticamente cancelado.</label>
+          <label><input type="radio" name="q32" />C) O processo é suspenso.</label>
+          <label><input type="radio" name="q32" />D) O endereço é tratado como inválido.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: A</p>
+          <p>Na ausência de entrada na TLB, a CPU, ou o SO, consulta a tabela de páginas na memória principal para obter a tradução correta e atualizar a TLB.</p>
+        </details>
+      </li>
+
+      <!-- 33 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">33.</span>
+          A Tabela de Processos (PCB) armazena:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q33" />A) Apenas o estado da memória do sistema.</label>
+          <label><input type="radio" name="q33" />B) Dados essenciais como PID, registradores e arquivos abertos.</label>
+          <label><input type="radio" name="q33" />C) Somente informações de E/S.</label>
+          <label><input type="radio" name="q33" />D) Prioridades de hardware.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>O PCB (Process Control Block) contém todo o contexto necessário para retomar a execução do processo: registradores, estado, PID, ponteiros de pilha, arquivos, etc.</p>
+        </details>
+      </li>
+
+      <!-- 34 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">34.</span>
+          A multiprogramação melhora o uso da CPU porque:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q34" />A) Reduz a frequência de interrupções.</label>
+          <label><input type="radio" name="q34" />B) Aproveita tempo ocioso quando processos aguardam E/S.</label>
+          <label><input type="radio" name="q34" />C) Evita troca de contexto.</label>
+          <label><input type="radio" name="q34" />D) Permite que todos os processos rodem ao mesmo tempo.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>Enquanto um processo está bloqueado em E/S, a CPU pode ser alocada a outro processo pronto, aumentando o aproveitamento global do processador.</p>
+        </details>
+      </li>
+
+      <!-- 35 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">35.</span>
+          O escalonador de processos determina:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q35" />A) Quais arquivos serão abertos.</label>
+          <label><input type="radio" name="q35" />B) Qual processo executa na CPU e por quanto tempo.</label>
+          <label><input type="radio" name="q35" />C) O tamanho das páginas.</label>
+          <label><input type="radio" name="q35" />D) O uso da memória virtual.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>O escalonador decide qual processo ocupará a CPU em cada instante e, em sistemas preemptivos, quanto tempo (quantum) ele ficará em execução.</p>
+        </details>
+      </li>
+
+      <!-- 36 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">36.</span>
+          Deadlock ocorre quando:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q36" />A) Um processo tenta abrir muitos arquivos.</label>
+          <label><input type="radio" name="q36" />B) Há um ciclo de dependências entre processos, impedindo o progresso.</label>
+          <label><input type="radio" name="q36" />C) O escalonador troca de processo muito rápido.</label>
+          <label><input type="radio" name="q36" />D) O sistema está com pouca RAM.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>No deadlock, cada processo do ciclo aguarda um recurso retido por outro processo do mesmo ciclo, de forma que nenhum consegue avançar.</p>
+        </details>
+      </li>
+
+      <!-- 37 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">37.</span>
+          A condição de “Exclusão Mútua” significa que:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q37" />A) Vários processos acessam o mesmo recurso ao mesmo tempo.</label>
+          <label><input type="radio" name="q37" />B) Nenhum processo pode ocupar a CPU por mais de um quantum.</label>
+          <label><input type="radio" name="q37" />C) Um recurso só pode ser usado por um processo por vez.</label>
+          <label><input type="radio" name="q37" />D) O sistema usa apenas memória cache.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: C</p>
+          <p>Exclusão mútua define que determinados recursos (por exemplo, impressora) não podem ser compartilhados simultaneamente por mais de um processo.</p>
+        </details>
+      </li>
+
+      <!-- 38 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">38.</span>
+          “Posse e Espera” ocorre quando:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q38" />A) O processo libera todos os recursos antes de pedir novos.</label>
+          <label><input type="radio" name="q38" />B) O processo segura recursos enquanto solicita outros adicionais.</label>
+          <label><input type="radio" name="q38" />C) O processo é preemptado durante uma E/S.</label>
+          <label><input type="radio" name="q38" />D) O SO força a liberação dos recursos.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>Na condição de posse e espera, o processo mantém um conjunto de recursos já alocados e, simultaneamente, aguarda a alocação de novos recursos.</p>
+        </details>
+      </li>
+
+      <!-- 39 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">39.</span>
+          A condição de Não-Preempção significa:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q39" />A) O sistema pode tomar recursos do processo a qualquer momento.</label>
+          <label><input type="radio" name="q39" />B) Recursos só podem ser removidos voluntariamente pelo processo.</label>
+          <label><input type="radio" name="q39" />C) Apenas a CPU é não-preemptiva.</label>
+          <label><input type="radio" name="q39" />D) Aplica-se apenas a impressoras.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>Não-preempção indica que, uma vez alocado, o recurso não pode ser retirado à força; o processo precisa liberá-lo explicitamente.</p>
+        </details>
+      </li>
+
+      <!-- 40 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">40.</span>
+          A condição de Espera Circular caracteriza:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q40" />A) Uma fila de impressão simples.</label>
+          <label><input type="radio" name="q40" />B) Um ciclo fechado onde cada processo espera o recurso do próximo.</label>
+          <label><input type="radio" name="q40" />C) Alternância normal de CPU.</label>
+          <label><input type="radio" name="q40" />D) Uma falha de hardware da RAM.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>Na espera circular, existe um ciclo P1 → P2 → ... → Pn → P1, em que cada processo aguarda um recurso detido pelo processo seguinte.</p>
+        </details>
+      </li>
+
+      <!-- 41 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">41.</span>
+          A prevenção de deadlock funciona eliminando:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q41" />A) Todas as requisições de recursos.</label>
+          <label><input type="radio" name="q41" />B) Pelo menos uma das quatro condições necessárias.</label>
+          <label><input type="radio" name="q41" />C) O uso de memória virtual.</label>
+          <label><input type="radio" name="q41" />D) Todos os processos de baixa prioridade.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>Prevenção significa projetar o sistema de forma que, pelo menos, uma das condições de Coffman (exclusão mútua, posse e espera, não-preempção, espera circular) nunca ocorra.</p>
+        </details>
+      </li>
+
+      <!-- 42 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">42.</span>
+          A evitação de deadlock consiste em:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q42" />A) Permitir o deadlock, mas identificar depois.</label>
+          <label><input type="radio" name="q42" />B) Verificar se cada alocação mantém o sistema em estado seguro.</label>
+          <label><input type="radio" name="q42" />C) Matar processos automaticamente.</label>
+          <label><input type="radio" name="q42" />D) Reduzir a prioridade de processos que usam muitos recursos.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>Na evitação, o sistema analisa cada nova requisição de recursos, garantindo que exista uma sequência segura na qual todos os processos possam terminar.</p>
+        </details>
+      </li>
+
+      <!-- 43 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">43.</span>
+          Na detecção de deadlock, o SO:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q43" />A) Impede deadlocks de acontecerem.</label>
+          <label><input type="radio" name="q43" />B) Permite que ocorram e periodicamente procura ciclos no grafo de alocação.</label>
+          <label><input type="radio" name="q43" />C) Cancela todos os processos automaticamente.</label>
+          <label><input type="radio" name="q43" />D) Usa apenas espera ocupada.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>A estratégia de detecção não previne deadlocks; o sistema executa algoritmos que analisam o grafo de recursos para identificar ciclos existentes.</p>
+        </details>
+      </li>
+
+      <!-- 44 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">44.</span>
+          A recuperação de deadlock envolve:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q44" />A) Reabastecer memória RAM.</label>
+          <label><input type="radio" name="q44" />B) Interromper processos para quebrar o ciclo.</label>
+          <label><input type="radio" name="q44" />C) Reiniciar o escalonador.</label>
+          <label><input type="radio" name="q44" />D) Apagar arquivos temporários.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>Uma vez detectado o deadlock, o sistema precisa encerrar ou forçar a liberação de recursos de alguns processos para remover o ciclo de dependência.</p>
+        </details>
+      </li>
+
+      <!-- 45 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">45.</span>
+          O algoritmo do avestruz (“Ignorar”):
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q45" />A) É proibido em sistemas modernos.</label>
+          <label><input type="radio" name="q45" />B) Assume que deadlocks são raros e não trata ativamente.</label>
+          <label><input type="radio" name="q45" />C) É usado para detectar ciclos rapidamente.</label>
+          <label><input type="radio" name="q45" />D) Elimina a condição de exclusão mútua.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>O algoritmo do avestruz simplesmente ignora a possibilidade de deadlock, apostando que sua probabilidade é tão baixa que o custo de tratar não se justifica.</p>
+        </details>
+      </li>
+
+      <!-- 46 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">46.</span>
+          Em paginação, uma página é:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q46" />A) Um bloco variável de memória.</label>
+          <label><input type="radio" name="q46" />B) Um bloco fixo (ex.: 4 KB) que organiza programas logicamente.</label>
+          <label><input type="radio" name="q46" />C) Um registrador.</label>
+          <label><input type="radio" name="q46" />D) Apenas parte do disco.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>Na paginação, o espaço de endereçamento é dividido em páginas de tamanho fixo, que são mapeadas para frames na memória física.</p>
+        </details>
+      </li>
+
+      <!-- 47 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">47.</span>
+          Quadros (frames) na RAM são:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q47" />A) Partes da TLB.</label>
+          <label><input type="radio" name="q47" />B) Blocos físicos do mesmo tamanho das páginas.</label>
+          <label><input type="radio" name="q47" />C) Segmentos variáveis de código.</label>
+          <label><input type="radio" name="q47" />D) Áreas reservadas ao DMA.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>Frames são unidades fixas de memória física; cada página virtual é carregada em um frame quando está em uso na RAM.</p>
+        </details>
+      </li>
+
+      <!-- 48 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">48.</span>
+          Paginação permite que processos executem sem:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q48" />A) Carregar todo o programa de uma vez na RAM.</label>
+          <label><input type="radio" name="q48" />B) Utilizar E/S.</label>
+          <label><input type="radio" name="q48" />C) Fazer chamadas de sistema.</label>
+          <label><input type="radio" name="q48" />D) Usar cache.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: A</p>
+          <p>Com paginação sob demanda, apenas as páginas necessárias do programa são carregadas, permitindo execução mesmo sem espaço para todo o binário na RAM.</p>
+        </details>
+      </li>
+
+      <!-- 49 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">49.</span>
+          A TLB acelera acessos porque:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q49" />A) Substitui a tabela de páginas completamente.</label>
+          <label><input type="radio" name="q49" />B) Armazena as traduções usadas recentemente, evitando consultas lentas.</label>
+          <label><input type="radio" name="q49" />C) Executa instruções de usuário.</label>
+          <label><input type="radio" name="q49" />D) Elimina page faults.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>A TLB guarda um subconjunto das entradas de tabela de páginas mais acessadas, acelerando a tradução em acessos repetidos ao mesmo conjunto de páginas.</p>
+        </details>
+      </li>
+
+      <!-- 50 -->
+      <li class="question">
+        <div class="question-title">
+          <span class="codigo-questao">50.</span>
+          Um sistema está em deadlock somente se:
+        </div>
+        <div class="options">
+          <label><input type="radio" name="q50" />A) A RAM está cheia.</label>
+          <label><input type="radio" name="q50" />B) Todas as quatro condições estiverem presentes simultaneamente.</label>
+          <label><input type="radio" name="q50" />C) O escalonador não funcionar.</label>
+          <label><input type="radio" name="q50" />D) Houver page faults sucessivos.</label>
+        </div>
+        <details>
+          <summary>Mostrar resposta e explicação</summary>
+          <p class="resposta-correta">Resposta correta: B</p>
+          <p>De acordo com Coffman, deadlock só ocorre se exclusão mútua, posse e espera, não-preempção e espera circular estiverem presentes ao mesmo tempo.</p>
+        </details>
+      </li>
+
+    </ol>
+  </div>
+  </main>
+</body>
+</html>
